@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-public class Mario : MonoBehaviour
+public class Mario : MonoBehaviour//ajuste de limite de pulo faltando
 {
     public float velocidade;
     public float ForcaPulo;
