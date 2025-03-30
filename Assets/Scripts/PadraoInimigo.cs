@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PadraoInimigo : MonoBehaviour
-{
+{//corrigir colisao com outros inimigos
     public float velocidade = 5f;
     public Vector2 direcao = Vector2.left;
 
