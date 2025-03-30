@@ -29,9 +29,4 @@ public class Mario : MonoBehaviour//ajuste de limite de pulo faltando
             corpo.AddForce(new Vector2(0f, ForcaPulo), ForceMode2D.Impulse);
     }
 
-    void OnCollisionEnter2D(Collision2D collision){//mario morre
-        if(collision.gameObject.CompareTag("Inimigo"))
-            Destroy(gameObject);
-    }
-
 }
