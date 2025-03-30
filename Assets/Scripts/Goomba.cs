@@ -8,6 +8,8 @@ public class Goomba : MonoBehaviour
         {
             if(collision.transform.DotTest(transform, Vector2.down))
                 Destroy(gameObject);
+            else
+                Destroy(collision.gameObject);//mario morre, trocar pra logica de reiniciar fase e tduo dps
         }
     }
 }
