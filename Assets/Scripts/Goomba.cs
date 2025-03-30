@@ -16,4 +16,5 @@ public class Goomba : MonoBehaviour
     {
         corpo.linearVelocity = new Vector2(velocidade, corpo.linearVelocity.y);
     }
+
 }
