@@ -8,7 +8,7 @@ public class Blocos : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            if(collision.transform.DotTest(transform, Vector2.up))
+            if(collision.transform.DotTest(transform, Vector2.up))//se for tijolo e o mario tiver grande some
                 Hit();
         }
     }
