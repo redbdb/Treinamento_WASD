@@ -15,7 +15,7 @@ public class PadraoInimigo : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()//colocar pra ignorar outros inimigos
     { 
         vetorVel.x = direcao.x * velocidade;
         vetorVel.y += Physics.gravity.y * Time.fixedDeltaTime;
