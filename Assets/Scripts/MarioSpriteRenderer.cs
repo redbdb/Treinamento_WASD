@@ -16,16 +16,16 @@ public class MarioSpriteRenderer : MonoBehaviour
         movimento = GetComponentInParent<Mario>();
     }
 
-    /*private void LateUpdate()//mudanças futuras 
+        private void LateUpdate()
     {
-        if(movimento.pulando){
+        if(!movimento.isGrounded){
             spriteRenderer.sprite = pulando;
-        }else if(movimento.drift){
+        }/*else if(movimento.drift){
             spriteRenderer.sprite = drift;
-        }else if(movimento.correndo){
-            spriteRenderer = correndo;
+        }*/else if(movimento.correndo){//finalizar animaçõa de corrida
+            spriteRenderer.sprite = correndo;
         }else{
-            spriteRenderer = parado;
+            spriteRenderer.sprite = parado;
         }
-    }*/
+    }
 }

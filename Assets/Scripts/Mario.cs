@@ -9,11 +9,16 @@ public class Mario : MonoBehaviour
 
     public float ForcaPulo;
     public bool isGrounded;
+    public bool correndo;
 
     // Update is called once per frame
     void Update()
     {
         isGrounded = corpo.Raycast(Vector2.down);
+        if(corpo.linearVelocity.x > 0f)
+            correndo = true;
+        else
+            correndo = false;
         Mover();
         Pular();
     }
@@ -27,6 +32,7 @@ public class Mario : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump") && isGrounded)
             corpo.AddForce(new Vector2(0f, ForcaPulo), ForceMode2D.Impulse);
+            
     }
 
 }

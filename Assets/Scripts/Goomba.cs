@@ -6,10 +6,11 @@ public class Goomba : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            if(collision.transform.DotTest(transform, Vector2.down))
+            if(collision.transform.DotTest(transform, Vector2.down)){//adicionar sprite de morte e delay pra sumir, tem que ter certeza q hitbox dele nao vai matar quando tiver amassado
                 Destroy(gameObject);
+            }    
             else
-                Destroy(collision.gameObject);//mario morre, trocar pra logica de reiniciar fase e tduo dps
+                Destroy(collision.gameObject);//mario some, trocar pra logica de reiniciar fase e tduo dps
         }
     }
 }

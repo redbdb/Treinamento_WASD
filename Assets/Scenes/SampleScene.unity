@@ -56019,6 +56019,7 @@ MonoBehaviour:
   corpo: {fileID: 1795483454}
   ForcaPulo: 9.5
   isGrounded: 1
+  correndo: 0
 --- !u!50 &1795483454
 Rigidbody2D:
   serializedVersion: 5
@@ -56031,7 +56032,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -56398,7 +56399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5e5de6682c35042aaab03cf713d27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parado: {fileID: 8088659657849610202, guid: b77d79489a17c64478df0d888b52957d, type: 3}
+  parado: {fileID: 21300000, guid: b77d79489a17c64478df0d888b52957d, type: 3}
   correndo: {fileID: -4751271099544396211, guid: aaf5978641fa21448b9bdc5b7632e1c7, type: 3}
   pulando: {fileID: -2770977294677899711, guid: 1f694f50d18ea8c41bc882f94c523c80, type: 3}
   drift: {fileID: 1641829922395935316, guid: ab480c1e7fce8964a81113dfd089c914, type: 3}
