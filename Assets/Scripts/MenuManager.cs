@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
 
     private void OnTriggerEnter2D()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("GameOver");
     }
 
     public void LoadScenes(string cena){//carrega uma cena passada como argumento
