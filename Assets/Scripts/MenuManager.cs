@@ -4,11 +4,11 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
 
-    public AudioSource som;
+    public AudioSource Musica;
 
     void Start(){//iniciar coloca musica em loop e amostra o cursor, estaria invisivel se tivesse reiniciado o jogo no menu de pause
-        som.loop = true;
-        som.Play();
+        Musica.loop = true;
+        Musica.Play();
     }
 
     private void OnTriggerEnter2D()

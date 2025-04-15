@@ -4,6 +4,9 @@ public class GameManager : MonoBehaviour
 {
     private bool pausado = false;
     public GameObject pauseUI;
+
+    public AudioSource somPause;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +22,7 @@ public class GameManager : MonoBehaviour
                 Resume();
             }
             else{
+                somPause.Play();
                 Time.timeScale = 0;
                 pausado = true;
                 pauseUI.SetActive(true);

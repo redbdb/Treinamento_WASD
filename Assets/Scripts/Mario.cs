@@ -11,6 +11,9 @@ public class Mario : MonoBehaviour
     public bool isGrounded;
     public bool correndo;
 
+    public AudioSource somPuloPequeno;
+    public AudioSource somPuloGrande;
+
     void Update()
     {
         isGrounded = corpo.Raycast(Vector2.down);
@@ -31,8 +34,11 @@ public class Mario : MonoBehaviour
 
     void Pular()
     {
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButtonDown("Jump") && isGrounded){//verificar se esta grande ou nao pra tocar o som
+            somPuloPequeno.Play();
             corpo.AddForce(new Vector2(0f, ForcaPulo), ForceMode2D.Impulse);
+        }
+            
             
     }
 

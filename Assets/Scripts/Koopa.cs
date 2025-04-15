@@ -6,26 +6,38 @@ public class Koopa : MonoBehaviour
     private bool encolhido = false;
     private bool movendo = false;
 
+    public AudioSource somChute;
+    public AudioSource somMorteMario;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(!encolhido && collision.gameObject.CompareTag("Player"))
         {
-            if(collision.transform.DotTest(transform, Vector2.down))
+            
+            if(collision.transform.DotTest(transform, Vector2.down)){
+                somChute.Play();
                 Concha();
-            else
+            }
+            else{
+                somMorteMario.Play();
                 Destroy(collision.gameObject);//mario morre, trocar pra logica de reiniciar fase e tduo dps
+            }
+                
         }
         
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if(encolhido && other.gameObject.CompareTag("Player")){
             if(movendo){
+                somChute.Play();
                 Destroy(other.gameObject);
             }else{
                 Vector2 direcao = new Vector2(transform.position.x - other.transform.position.x, 0f);
                 Empurra(direcao);
+                somChute.Play();
             }
         }
     }
