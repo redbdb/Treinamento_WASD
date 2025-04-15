@@ -30,4 +30,11 @@ public class PadraoInimigo : MonoBehaviour
             vetorVel.y = Mathf.Max(vetorVel.y, 0f);
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Inimigo"))
+        {
+            direcao = -direcao;
+        }
+    }
 }
