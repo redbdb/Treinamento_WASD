@@ -5,16 +5,21 @@ public class Goomba : MonoBehaviour
     public AudioSource somMorteMario;
     public AudioSource somMorteGoomba;
 
+    private SpriteRenderer spriteRenderer;
+    public Sprite goombaAmassado;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
             if(collision.transform.DotTest(transform, Vector2.down)){
                 somMorteGoomba.Play();
-                //tirar hitbox
-                //amassar
-                //delay
-                Destroy(gameObject);
+                amassar();
             }    
             else{
                 somMorteMario.Play();
@@ -22,5 +27,12 @@ public class Goomba : MonoBehaviour
             }
                
         }
+    }
+
+    private void amassar(){
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<PadraoInimigo>().enabled = false;
+        spriteRenderer.sprite = goombaAmassado;
+        Destroy(gameObject, 0.5f);
     }
 }
