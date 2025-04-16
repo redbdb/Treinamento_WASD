@@ -9,7 +9,9 @@ public class Mario : MonoBehaviour
 
     public float ForcaPulo;
     public bool isGrounded;
+
     public bool correndo;
+    public bool sentido;
 
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
@@ -18,7 +20,7 @@ public class Mario : MonoBehaviour
     {
         isGrounded = corpo.Raycast(Vector2.down);
 
-        if(corpo.linearVelocity.x > 0f)
+        if(Mathf.Abs(corpo.linearVelocity.x) > 0.25f)
             correndo = true;
         else
             correndo = false;

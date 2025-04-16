@@ -19,6 +19,7 @@ public class Goomba : MonoBehaviour
         {
             if(collision.transform.DotTest(transform, Vector2.down)){
                 somMorteGoomba.Play();
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6), ForceMode2D.Impulse);
                 amassar();
             }    
             else{
