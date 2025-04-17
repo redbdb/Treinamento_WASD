@@ -44,6 +44,7 @@ public class Koopa : MonoBehaviour
 
     private void Concha()
     {
+        GetComponent<Animated>().enabled = false;
         GetComponent<PadraoInimigo>().enabled = false;
         GetComponent<SpriteRenderer>().sprite = conchaSprite;
         encolhido = true;
