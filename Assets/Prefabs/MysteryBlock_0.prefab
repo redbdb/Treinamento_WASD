@@ -147,4 +147,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed28a5e3c557444ab3b25ecfac86176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blocoVazio: {fileID: -4877739707033810275, guid: fb8807f1b1f6e7e448969cfff94ffcb8, type: 3}
   Maxhits: -1
