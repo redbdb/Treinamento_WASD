@@ -61791,6 +61791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MysteryBlock_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1630825816757028323, guid: e7cb43f787e70884abd80101d4cbc2df, type: 3}
+      propertyPath: blocoVazio
+      value: 
+      objectReference: {fileID: -4877739707033810275, guid: fb8807f1b1f6e7e448969cfff94ffcb8, type: 3}
     - target: {fileID: 3821593618004461561, guid: e7cb43f787e70884abd80101d4cbc2df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5
