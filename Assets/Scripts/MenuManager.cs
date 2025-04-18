@@ -11,11 +11,6 @@ public class MenuManager : MonoBehaviour
         Musica.Play();
     }
 
-    private void OnTriggerEnter2D()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
-
     public void LoadScenes(string cena){//carrega uma cena passada como argumento
         SceneManager.LoadScene(cena);
         Time.timeScale = 1;

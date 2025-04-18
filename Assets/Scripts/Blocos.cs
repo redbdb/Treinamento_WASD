@@ -10,7 +10,7 @@ public class Blocos : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            if(collision.transform.DotTest(transform, Vector2.up))//-1 para quebraveis(so quebram se mario tiver grande)
+            if(collision.transform.DotTest(transform, Vector2.up))//colocar bool mario grande
                 if(Maxhits < 0)//colocar condiçõa do miro grande
                     Destroy(gameObject);
                 else
