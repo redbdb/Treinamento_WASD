@@ -19,6 +19,7 @@ public class Mastro : MonoBehaviour
     private IEnumerator LevelClear(Transform mario)//ajustar velocidade e 
     {
         mario.GetComponent<Mario>().enabled = false;
+        mario.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
 
         yield return Mover(mario, fundo.position);
         yield return Mover(mario, mario.position + Vector3.right);
@@ -31,8 +32,10 @@ public class Mastro : MonoBehaviour
 
     private IEnumerator Mover(Transform objeto, Vector3 pos)
     {
+        float vel = 4f;
+
         while(Vector3.Distance(objeto.position, pos) > 0.125f){
-            objeto.position = Vector3.MoveTowards(objeto.position, pos, 6f * Time.deltaTime);
+            objeto.position = Vector3.MoveTowards(objeto.position, pos, vel * Time.deltaTime);
             yield return null;
         }
 
