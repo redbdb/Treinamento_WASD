@@ -6,9 +6,16 @@ public class CameraFollow : MonoBehaviour
     public float yOffset;
     public Transform Target;
 
-    void Update()//ajustes de limites faltando
+    public Transform mastro;
+
+    void Awake()//verificar logica do y
     {
-        Vector3 newPos = new Vector3(Target.position.x,Target.position.y + yOffset,-10f);
+        yOffset = Target.position.y + yOffset;
+    }
+
+    void Update()
+    {   
+        Vector3 newPos = new Vector3( Mathf.Min(Mathf.Max(Target.position.x, transform.position.x), mastro.position.x), yOffset, -10f);
         transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed*Time.deltaTime);
     }
 }

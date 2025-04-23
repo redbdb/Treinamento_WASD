@@ -16,6 +16,13 @@ public class Mario : MonoBehaviour
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
 
+    private new Camera camera;
+
+    void Awake()
+    {
+        camera = Camera.main;
+    }
+
     void Update()
     {
         isGrounded = corpo.Raycast(Vector2.down);
@@ -31,7 +38,15 @@ public class Mario : MonoBehaviour
 
     void Mover()
     {
+        Vector2 bordaE = camera.ScreenToWorldPoint(Vector2.zero);
+        Vector2 bordaD = camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        
+
         corpo.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * velocidade, corpo.linearVelocity.y);
+
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, bordaE.x + 0.4f, bordaD.x - 0.4f);
+        transform.position = pos;
     }
 
     void Pular()
