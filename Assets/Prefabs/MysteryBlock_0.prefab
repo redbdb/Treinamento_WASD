@@ -133,7 +133,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.15, y: 0.15}
   m_EdgeRadius: 0
 --- !u!114 &1630825816757028323
 MonoBehaviour:
@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocoVazio: {fileID: -4877739707033810275, guid: fb8807f1b1f6e7e448969cfff94ffcb8, type: 3}
   Maxhits: 1
+  brick: 0

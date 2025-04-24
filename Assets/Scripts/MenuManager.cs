@@ -6,16 +6,16 @@ public class MenuManager : MonoBehaviour
 
     public AudioSource Musica;
 
-    private bool pas = false;
+    private bool pause = false;
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && !pas){
+        if(Input.GetKeyDown(KeyCode.Escape) && !pause){
             Musica.Pause();
-            pas = true;
-        }else if(Input.GetKeyDown(KeyCode.Escape) && pas){
-            Musica.Play(0);
-            pas = false;
+            pause = true;
+        }else if(Input.GetKeyDown(KeyCode.Escape) && pause){
+            Musica.Play();
+            pause = false;
         }
     }
 

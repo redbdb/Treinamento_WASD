@@ -9,9 +9,9 @@ public class Mario : MonoBehaviour
 
     public float ForcaPulo;
     public bool isGrounded;
-
     public bool correndo;
     public bool sentido;
+    public bool crescido;//colocar logica do mariozao, trocar filho ativo e collider de hitbox
 
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;

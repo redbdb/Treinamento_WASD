@@ -5,6 +5,7 @@ public class Blocos : MonoBehaviour
 {   
     public Sprite blocoVazio; 
     public int Maxhits = -1;
+    public bool brick;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
