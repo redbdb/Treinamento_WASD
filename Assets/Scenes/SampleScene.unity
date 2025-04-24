@@ -2665,8 +2665,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowSpeed: 10
-  yOffset: 3.7
-  Target: {fileID: 1835505409}
+  yOffset: 4.5
+  Target: {fileID: 1795483452}
+  mastro: {fileID: 1320879928}
 --- !u!1001 &521211731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59178,6 +59179,7 @@ MonoBehaviour:
   sentido: 1
   somPuloPequeno: {fileID: 1795483455}
   somPuloGrande: {fileID: 1795483456}
+  menu: {fileID: 483895859}
 --- !u!50 &1795483454
 Rigidbody2D:
   serializedVersion: 5

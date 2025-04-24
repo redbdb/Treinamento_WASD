@@ -33,6 +33,8 @@ public class Goomba : MonoBehaviour
     private void amassar(){
         GetComponent<Collider2D>().enabled = false;
         GetComponent<PadraoInimigo>().enabled = false;
+        GetComponent<Animated>().enabled = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         spriteRenderer.sprite = goombaAmassado;
         Destroy(gameObject, 0.5f);
     }

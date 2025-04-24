@@ -16,6 +16,8 @@ public class Mario : MonoBehaviour
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
 
+    public MenuManager menu;
+
     private new Camera camera;
 
     void Awake()
@@ -36,12 +38,16 @@ public class Mario : MonoBehaviour
         Pular();
     }
 
+    void OnDestroy()
+    {
+        menu.Musica.Pause();
+    }
+
     void Mover()
     {
         Vector2 bordaE = camera.ScreenToWorldPoint(Vector2.zero);
         Vector2 bordaD = camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         
-
         corpo.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * velocidade, corpo.linearVelocity.y);
 
         Vector3 pos = transform.position;
@@ -49,7 +55,7 @@ public class Mario : MonoBehaviour
         transform.position = pos;
     }
 
-    void Pular()
+    public void Pular()
     {
         if(Input.GetButtonDown("Jump") && isGrounded){//verificar se esta grande ou nao pra tocar o som
             somPuloPequeno.Play();

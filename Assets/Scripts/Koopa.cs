@@ -29,8 +29,9 @@ public class Koopa : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        if(encolhido && other.gameObject.CompareTag("Player")){
+        if(movendo && other.gameObject.CompareTag("Inimigo"))
+            Destroy(other.gameObject);//casco do koopa mata inimigo
+        else if(encolhido && other.gameObject.CompareTag("Player")){
             if(movendo){
                 somChute.Play();
                 Destroy(other.gameObject);
