@@ -7,14 +7,20 @@ public class Mario : MonoBehaviour
     public float velocidade;
     public Rigidbody2D corpo;
 
+    public Collider2D colisorPequeno;
+    public Collider2D colisorGrande;
+    public GameObject mariozinho;
+    public GameObject mariozao;
+
     public float ForcaPulo;
     public bool isGrounded;
     public bool correndo;
     public bool sentido;
-    public bool crescido;//colocar logica do mariozao, trocar filho ativo e collider de hitbox
+    public bool crescido;
 
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
+    public AudioSource somMorte;
 
     public MenuManager menu;
 
@@ -38,11 +44,6 @@ public class Mario : MonoBehaviour
         Pular();
     }
 
-    void OnDestroy()
-    {
-        menu.Musica.Pause();
-    }
-
     void Mover()
     {
         Vector2 bordaE = camera.ScreenToWorldPoint(Vector2.zero);
@@ -58,11 +59,39 @@ public class Mario : MonoBehaviour
     public void Pular()
     {
         if(Input.GetButtonDown("Jump") && isGrounded){//verificar se esta grande ou nao pra tocar o som
-            somPuloPequeno.Play();
+            if(crescido)
+                somPuloGrande.Play();
+            else
+                somPuloPequeno.Play();
             corpo.AddForce(new Vector2(0f, ForcaPulo), ForceMode2D.Impulse);
-        }
-            
-            
+        }       
     }
 
+    public void TakeHit(){//colocar invencibilidade
+        if(crescido){
+            colisorPequeno.enabled = true;
+            colisorGrande.enabled = false;
+            mariozinho.SetActive(true);
+            mariozao.SetActive(false);
+        } else{
+            Dies();
+        }
+    }
+
+    public void Grow(){
+        if(crescido)
+            return;
+        else{
+            colisorPequeno.enabled = false;
+            colisorGrande.enabled = true;
+            mariozao.SetActive(true);
+            mariozinho.SetActive(false);
+        }
+    }
+
+    public void Dies(){
+        menu.Musica.Pause();
+        somMorte.Play();
+        //colocar aqui reação da morte
+    }
 }

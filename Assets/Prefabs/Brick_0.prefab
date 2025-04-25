@@ -149,4 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocoVazio: {fileID: 0}
   Maxhits: -1
-  brick: 0
+  brick: 1

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Goomba : MonoBehaviour
 {
-    public AudioSource somMorteMario;
     public AudioSource somMorteGoomba;
 
     private SpriteRenderer spriteRenderer;
@@ -23,8 +22,7 @@ public class Goomba : MonoBehaviour
                 amassar();
             }    
             else{
-                somMorteMario.Play();
-                Destroy(collision.gameObject);//mario some, trocar pra logica de reiniciar fase e tduo dps
+                collision.gameObject.GetComponent<Mario>().TakeHit();
             }
                
         }

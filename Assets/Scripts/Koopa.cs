@@ -7,7 +7,6 @@ public class Koopa : MonoBehaviour
     private bool movendo = false;
 
     public AudioSource somChute;
-    public AudioSource somMorteMario;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,18 +18,17 @@ public class Koopa : MonoBehaviour
                 Concha();
             }
             else{
-                somMorteMario.Play();
-                Destroy(collision.gameObject);//mario morre, trocar pra logica de reiniciar fase e tduo dps
+                collision.gameObject.GetComponent<Mario>().TakeHit();
             }
                 
         }
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)//ajustar logica
     {
         if(movendo && other.gameObject.CompareTag("Inimigo"))
-            Destroy(other.gameObject);//casco do koopa mata inimigo
+            Destroy(other.gameObject);
         else if(encolhido && other.gameObject.CompareTag("Player")){
             if(movendo){
                 somChute.Play();

@@ -9,13 +9,12 @@ public class Blocos : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Player") && collision.transform.DotTest(transform, Vector2.up))
         {
-            if(collision.transform.DotTest(transform, Vector2.up))//colocar bool mario grande
-                if(Maxhits < 0)//colocar condiçõa do miro grande
-                    Destroy(gameObject);
-                else
-                    Hit();
+            if(brick && collision.gameObject.GetComponent<Mario>().crescido)
+                Destroy(gameObject);
+            else
+                Hit();
         }
     }
 
