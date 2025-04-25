@@ -29,6 +29,7 @@ public class Mario : MonoBehaviour
 
     void Awake()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         camera = Camera.main;
     }
 
@@ -91,9 +92,9 @@ public class Mario : MonoBehaviour
     }
 
     public void Dies(){
-        gameManager.ResetLevel();
         menu.Musica.Pause();
         somMorte.Play();
+        gameManager.ResetLevel();
         //colocar aqui reação da morte
     }
 }

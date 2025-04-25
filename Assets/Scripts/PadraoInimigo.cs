@@ -13,18 +13,16 @@ public class PadraoInimigo : MonoBehaviour
     {
         corpo = GetComponent<Rigidbody2D>();
         enabled = false;
-        corpo.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }
 
     void OnBecameVisible()
     {
         enabled = true;
-        corpo.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 
     void OnBecameInvisible()
     {
-        enabled = false;
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

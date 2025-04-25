@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mastro : MonoBehaviour
 {
-    public GameManager gameManager;
+    public MenuManager menuManager;
 
     public Transform bandeira;
     public Transform fundo;
@@ -13,7 +13,7 @@ public class Mastro : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
-            gameManager.Pontuar(2500);
+            menuManager.Pontuar(2500);
             StartCoroutine(Mover(bandeira, fundo.position));
             StartCoroutine(LevelClear(other.transform));
         }

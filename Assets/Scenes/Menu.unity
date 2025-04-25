@@ -285,7 +285,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52594e42d2461d846b9f54941162e3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  som: {fileID: 353008396}
+  gameManager: {fileID: 0}
+  pauseUI: {fileID: 0}
+  txtpontos: {fileID: 0}
+  txtvidas: {fileID: 0}
+  somPause: {fileID: 0}
+  Musica: {fileID: 0}
+  pontos: 0
+  vidas: 0
 --- !u!4 &353008395
 Transform:
   m_ObjectHideFlags: 0

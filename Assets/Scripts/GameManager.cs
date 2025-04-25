@@ -1,57 +1,35 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using TMPro;
 using System;
 
+[DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
 {
-    private bool pausado = false;
-    public GameObject pauseUI;
+    public static GameManager Instance { get; private set; }
 
-    public TextMeshProUGUI mainText;
-    public int pontos = 0;
-    public int vidas = 3;
+    public int vidas { get; private set; } = 3;
 
-    public AudioSource somPause;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        pauseUI.SetActive(false);
-        Pontuar(0);
+        if (Instance != null) {
+            DestroyImmediate(gameObject);
+        } else {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))//ao pressionar a tecla esc
-        {
-            if(pausado){
-                Resume();
-            }
-            else{
-                somPause.Play();
-                Time.timeScale = 0;
-                pausado = true;
-                pauseUI.SetActive(true);
-            };
+        if (Instance == this) {
+            Instance = null;
         }
     }
 
-    public void Resume()
-    {
-        Time.timeScale = 1;
-        pausado = false;
-        pauseUI.SetActive(false);
-    }
-
-    public void Pontuar(int quant){
-        pontos += quant;
-        mainText.text = pontos.ToString().PadLeft(6, '0');;
-    }
-
     public void ResetLevel(){
+        Debug.Log("Vidas pre: " + vidas);
         vidas--;
+        Debug.Log("Vidas pos: " + vidas);
 
         if(vidas > 0){
             SceneManager.LoadScene("SampleScene");
