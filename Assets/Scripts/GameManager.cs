@@ -1,9 +1,13 @@
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     private bool pausado = false;
     public GameObject pauseUI;
+
+    public TextMeshProUGUI mainText;
+    public int pontos = 0;
 
     public AudioSource somPause;
 
@@ -11,6 +15,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pauseUI.SetActive(false);
+        Pontuar(0);
     }
 
     // Update is called once per frame
@@ -35,5 +40,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         pausado = false;
         pauseUI.SetActive(false);
+    }
+
+    public void Pontuar(int quant){
+        pontos += quant;
+        mainText.text = pontos.ToString().PadLeft(6, '0');;
     }
 }

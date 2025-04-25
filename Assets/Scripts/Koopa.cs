@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Koopa : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public Sprite conchaSprite;
     private bool encolhido = false;
     private bool movendo = false;
@@ -14,6 +16,7 @@ public class Koopa : MonoBehaviour
         {
             
             if(collision.transform.DotTest(transform, Vector2.down)){
+                gameManager.Pontuar(500);
                 somChute.Play();
                 Concha();
             }
@@ -25,7 +28,7 @@ public class Koopa : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)//ajustar logica
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(movendo && other.gameObject.CompareTag("Inimigo"))
             Destroy(other.gameObject);
@@ -34,6 +37,7 @@ public class Koopa : MonoBehaviour
                 somChute.Play();
                 Destroy(other.gameObject);
             }else{
+                gameManager.Pontuar(400);
                 Vector2 direcao = new Vector2(transform.position.x - other.transform.position.x, 0f);
                 Empurra(direcao);
                 somChute.Play();

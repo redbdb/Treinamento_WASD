@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Goomba : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public AudioSource somMorteGoomba;
 
     private SpriteRenderer spriteRenderer;
@@ -17,6 +19,7 @@ public class Goomba : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             if(collision.transform.DotTest(transform, Vector2.down)){
+                gameManager.Pontuar(100);
                 somMorteGoomba.Play();
                 collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6), ForceMode2D.Impulse);
                 amassar();
