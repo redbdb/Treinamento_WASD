@@ -23,6 +23,7 @@ public class Mario : MonoBehaviour
     public AudioSource somMorte;
 
     public MenuManager menu;
+    public GameManager gameManager;
 
     private new Camera camera;
 
@@ -90,6 +91,7 @@ public class Mario : MonoBehaviour
     }
 
     public void Dies(){
+        gameManager.ResetLevel();
         menu.Musica.Pause();
         somMorte.Play();
         //colocar aqui reação da morte

@@ -22,6 +22,11 @@ public class PadraoInimigo : MonoBehaviour
         corpo.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 
+    void OnBecameInvisible()
+    {
+        enabled = false;
+    }
+
     // Update is called once per frame
     void Update()//colocar pra ignorar outros inimigos
     { 

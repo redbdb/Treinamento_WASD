@@ -1,5 +1,7 @@
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI mainText;
     public int pontos = 0;
+    public int vidas = 3;
 
     public AudioSource somPause;
 
@@ -45,5 +48,15 @@ public class GameManager : MonoBehaviour
     public void Pontuar(int quant){
         pontos += quant;
         mainText.text = pontos.ToString().PadLeft(6, '0');;
+    }
+
+    public void ResetLevel(){
+        vidas--;
+
+        if(vidas > 0){
+            SceneManager.LoadScene("SampleScene");
+        }else{
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
