@@ -12,6 +12,14 @@ public class PadraoInimigo : MonoBehaviour
     void Start()
     {
         corpo = GetComponent<Rigidbody2D>();
+        enabled = false;
+        corpo.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    void OnBecameVisible()
+    {
+        enabled = true;
+        corpo.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 
     // Update is called once per frame
