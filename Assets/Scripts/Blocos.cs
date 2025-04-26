@@ -40,6 +40,7 @@ public class Blocos : MonoBehaviour
     private void Hit()
     {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = true;
         Transform transform = GetComponent<Transform>();
         Vector3 posI = transform.position;
 
