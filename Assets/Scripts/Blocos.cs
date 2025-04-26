@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Blocos : MonoBehaviour
 {   
+    public GameObject item;
+
     public Sprite blocoVazio; 
     public int Maxhits = -1;
     public bool brick;
@@ -43,6 +45,10 @@ public class Blocos : MonoBehaviour
         spriteRenderer.enabled = true;
         Transform transform = GetComponent<Transform>();
         Vector3 posI = transform.position;
+
+        if (item != null) {
+            Instantiate(item, transform.position, Quaternion.identity);
+        }
 
         StartCoroutine(Animacao(posI,  transform.position + Vector3.up * 0.5f));
         StartCoroutine(Animacao(transform.position + Vector3.up * 0.5f, posI));

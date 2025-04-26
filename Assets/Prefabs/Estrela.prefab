@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 3024478162917485451}
   - component: {fileID: 9043421748799978645}
   - component: {fileID: 8794811895242988843}
-  m_Layer: 0
+  - component: {fileID: 6037511281913641478}
+  - component: {fileID: -359968469592298853}
+  m_Layer: 7
   m_Name: Estrela
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,3 +201,29 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &6037511281913641478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419851298440526624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f4d1dce1eeff746ae3c1c35abb817a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-359968469592298853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419851298440526624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a02eba51107fe44a45aee8ed5a99fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 2
+  direcao: {x: 1, y: 0}

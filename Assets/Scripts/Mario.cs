@@ -91,6 +91,10 @@ public class Mario : MonoBehaviour
         }
     }
 
+    public void CogumeloUP(){
+        gameManager.UP();
+    }
+
     public void Dies(){
         menu.Musica.Pause();
         somMorte.Play();

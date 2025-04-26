@@ -20,6 +20,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
+        txtvidas.text = gameManager.GetComponent<GameManager>().vidas.ToString();
         if(Input.GetKeyDown(KeyCode.Escape) && !pause){
             Time.timeScale = 0;
             Musica.Pause();

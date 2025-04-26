@@ -37,4 +37,8 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
     }
+
+    public void UP(){
+        vidas++;
+    }
 }
