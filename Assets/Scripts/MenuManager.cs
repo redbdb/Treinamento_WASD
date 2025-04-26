@@ -11,16 +11,19 @@ public class MenuManager : MonoBehaviour
 
     public TextMeshProUGUI txtpontos;
     public TextMeshProUGUI txtvidas;
+    public TextMeshProUGUI txtmoedas;
 
     public AudioSource somPause;
     public AudioSource Musica;
 
     public int pontos = 0;
-    public int vidas;//tem que pega do gamemanager
+    public int vidas;
+    public int moedas = 0;
 
     void Update()
     {
         txtvidas.text = gameManager.GetComponent<GameManager>().vidas.ToString();
+
         if(Input.GetKeyDown(KeyCode.Escape) && !pause){
             Time.timeScale = 0;
             Musica.Pause();
@@ -38,6 +41,7 @@ public class MenuManager : MonoBehaviour
 
         pauseUI.SetActive(false);
         txtvidas.text = gameManager.GetComponent<GameManager>().vidas.ToString();
+        txtmoedas.text = "00";
         Pontuar(0);
 
         Musica.loop = true;
@@ -67,5 +71,10 @@ public class MenuManager : MonoBehaviour
 
     public void UP1(){
         vidas++;
+    }
+
+    public void AddMoeda(){
+        moedas++;
+        txtmoedas.text = moedas.ToString().PadLeft(2, '0');
     }
 }

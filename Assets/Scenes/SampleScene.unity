@@ -6235,9 +6235,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3153738020960899032, guid: 02abf1890052f304bb4c9f417020154a, type: 3}
     - target: {fileID: 7531429899962612298, guid: 667c738bc7fbede49a5ddf61f33c6a89, type: 3}
-      propertyPath: Maxhits
-      value: 5
+      propertyPath: brick
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7531429899962612298, guid: 667c738bc7fbede49a5ddf61f33c6a89, type: 3}
+      propertyPath: Maxhits
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531429899962612298, guid: 667c738bc7fbede49a5ddf61f33c6a89, type: 3}
+      propertyPath: blocoVazio
+      value: 
+      objectReference: {fileID: -4877739707033810275, guid: fb8807f1b1f6e7e448969cfff94ffcb8, type: 3}
     - target: {fileID: 8409462025288199676, guid: 667c738bc7fbede49a5ddf61f33c6a89, type: 3}
       propertyPath: m_LocalPosition.x
       value: 82.5
@@ -58345,6 +58353,7 @@ MonoBehaviour:
   correndo: 0
   sentido: 1
   crescido: 0
+  starp: 0
   somPuloPequeno: {fileID: 1795483455}
   somPuloGrande: {fileID: 1795483456}
   somMorte: {fileID: 1795483458}
@@ -60425,6 +60434,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 1419851298440526624, guid: 9b050f5c1006dcb499ec348a490e2557, type: 3}
+    - target: {fileID: 7531429899962612298, guid: 667c738bc7fbede49a5ddf61f33c6a89, type: 3}
+      propertyPath: brick
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7531429899962612298, guid: 667c738bc7fbede49a5ddf61f33c6a89, type: 3}
       propertyPath: Maxhits
       value: 1

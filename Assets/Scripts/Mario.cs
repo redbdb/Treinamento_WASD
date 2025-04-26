@@ -45,6 +45,7 @@ public class Mario : MonoBehaviour
 
         Mover();
         Pular();
+        AplicarFisicaPulo();
     }
 
     void Mover()
@@ -69,6 +70,22 @@ public class Mario : MonoBehaviour
             corpo.AddForce(new Vector2(0f, ForcaPulo), ForceMode2D.Impulse);
         }       
     }
+
+    void AplicarFisicaPulo()
+{
+    if (corpo.linearVelocity.y > 0 && !Input.GetButton("Jump"))
+    {
+        corpo.gravityScale = 3.5f;
+    }
+    else if (corpo.linearVelocity.y < 0)
+    {
+        corpo.gravityScale = 3f;
+    }
+    else
+    {
+        corpo.gravityScale = 1f;
+    }
+}
 
     public void TakeHit()
     {//colocar invencibilidade
