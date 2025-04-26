@@ -89,6 +89,7 @@ public class Mario : MonoBehaviour
         if(crescido)
             return;
         else{
+            sentido = true;
             colisorPequeno.enabled = false;
             colisorGrande.enabled = true;
             mariozao.SetActive(true);

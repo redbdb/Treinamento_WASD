@@ -11,6 +11,10 @@ public class Blocos : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(Maxhits == 0){
+            return;
+        } 
+
         if(collision.gameObject.CompareTag("Player") && collision.transform.DotTest(transform, Vector2.up))
         {
             if(brick && collision.gameObject.GetComponent<Mario>().crescido)
