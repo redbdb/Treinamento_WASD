@@ -17,6 +17,7 @@ public class Mario : MonoBehaviour
     public bool correndo;
     public bool sentido;
     public bool crescido;
+    public bool starp = false;//{ get; private set; }
 
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
@@ -69,15 +70,19 @@ public class Mario : MonoBehaviour
         }       
     }
 
-    public void TakeHit(){//colocar invencibilidade
-        if(crescido){
-            colisorPequeno.enabled = true;
-            colisorGrande.enabled = false;
-            mariozinho.SetActive(true);
-            mariozao.SetActive(false);
-        } else{
-            Dies();
-        }
+    public void TakeHit()
+    {//colocar invencibilidade
+        if(!starp){
+            if(crescido){
+                crescido = false;
+                colisorPequeno.enabled = true;
+                colisorGrande.enabled = false;
+                mariozinho.SetActive(true);
+                mariozao.SetActive(false);
+            } else{
+                Dies();
+            }
+        } 
     }
 
     public void Grow(){
@@ -88,11 +93,41 @@ public class Mario : MonoBehaviour
             colisorGrande.enabled = true;
             mariozao.SetActive(true);
             mariozinho.SetActive(false);
+            crescido = true;
         }
     }
 
     public void CogumeloUP(){
         gameManager.UP();
+    }
+
+    public void Starpower(){
+        StartCoroutine(StarpowerAnimation());
+    }
+
+    public IEnumerator StarpowerAnimation(){
+        starp = true;
+
+        float feito = 0f;
+        float duracao = 10f;
+
+        while(feito < duracao){
+            float t = feito/duracao;
+
+            
+            feito += Time.deltaTime;
+
+            if(Time.frameCount % 4 == 0){
+                mariozinho.GetComponent<SpriteRenderer>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
+                mariozao.GetComponent<SpriteRenderer>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
+            }
+
+            yield return null;
+        }
+
+        mariozinho.GetComponent<SpriteRenderer>().color = Color.white;
+        mariozao.GetComponent<SpriteRenderer>().color = Color.white;
+        starp = false;
     }
 
     public void Dies(){

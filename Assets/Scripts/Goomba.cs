@@ -17,16 +17,20 @@ public class Goomba : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
-        {
-            if(collision.transform.DotTest(transform, Vector2.down)){
-                menuManager.Pontuar(100);
-                somMorteGoomba.Play();
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6), ForceMode2D.Impulse);
-                amassar();
-            }    
-            else{
-                collision.gameObject.GetComponent<Mario>().TakeHit();
+        {   if(!collision.gameObject.GetComponent<Mario>().starp){
+                if(collision.transform.DotTest(transform, Vector2.down)){
+                    menuManager.Pontuar(100);
+                    somMorteGoomba.Play();
+                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6), ForceMode2D.Impulse);
+                    amassar();
+                }    
+                else{
+                    collision.gameObject.GetComponent<Mario>().TakeHit();
+                }
+            }else{
+                Destroy(gameObject);
             }
+            
                
         }
     }

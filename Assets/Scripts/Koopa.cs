@@ -14,16 +14,18 @@ public class Koopa : MonoBehaviour
     {
         if(!encolhido && collision.gameObject.CompareTag("Player"))
         {
-            
-            if(collision.transform.DotTest(transform, Vector2.down)){
-                menuManager.Pontuar(500);
-                somChute.Play();
-                Concha();
-            }
-            else{
-                collision.gameObject.GetComponent<Mario>().TakeHit();
-            }
-                
+            if(!collision.gameObject.GetComponent<Mario>().starp){
+                if(collision.transform.DotTest(transform, Vector2.down)){
+                    menuManager.Pontuar(500);
+                    somChute.Play();
+                    Concha();
+                }
+                else{
+                    collision.gameObject.GetComponent<Mario>().TakeHit();
+                }   
+            }else{
+                Destroy(gameObject);
+            }            
         }
         
     }
@@ -33,14 +35,18 @@ public class Koopa : MonoBehaviour
         if(movendo && other.gameObject.CompareTag("Inimigo"))
             Destroy(other.gameObject);
         else if(encolhido && other.gameObject.CompareTag("Player")){
-            if(movendo){
-                somChute.Play();
-                Destroy(other.gameObject);
+            if(!other.gameObject.GetComponent<Mario>().starp){
+                if(movendo){
+                    somChute.Play();
+                    Destroy(other.gameObject);
+                }else{
+                    menuManager.Pontuar(400);
+                    Vector2 direcao = new Vector2(transform.position.x - other.transform.position.x, 0f);
+                    Empurra(direcao);
+                    somChute.Play();
+                }
             }else{
-                menuManager.Pontuar(400);
-                Vector2 direcao = new Vector2(transform.position.x - other.transform.position.x, 0f);
-                Empurra(direcao);
-                somChute.Play();
+                Destroy(gameObject);
             }
         }
     }

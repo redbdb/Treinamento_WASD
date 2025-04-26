@@ -27,9 +27,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void ResetLevel(){
-        Debug.Log("Vidas pre: " + vidas);
         vidas--;
-        Debug.Log("Vidas pos: " + vidas);
 
         if(vidas > 0){
             SceneManager.LoadScene("SampleScene");
