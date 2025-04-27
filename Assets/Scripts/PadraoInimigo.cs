@@ -5,7 +5,7 @@ public class PadraoInimigo : MonoBehaviour
     public float velocidade = 5f;
     public Vector2 direcao = Vector2.left;
 
-    private new Rigidbody2D corpo;
+    private Rigidbody2D corpo;
     private Vector2 vetorVel;
 
     void Start()

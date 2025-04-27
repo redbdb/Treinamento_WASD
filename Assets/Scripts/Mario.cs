@@ -182,7 +182,7 @@ public class Mario : MonoBehaviour
         colisorGrande.enabled = false;
         colisorPequeno.enabled = false;
         corpo.linearVelocity = new Vector2 (0,0);//talvez travar inves
-        corpo.isKinematic = true;
+        corpo.bodyType = RigidbodyType2D.Kinematic;
         this.enabled = false;
 
         GetComponent<SpriteRenderer>().enabled = true;

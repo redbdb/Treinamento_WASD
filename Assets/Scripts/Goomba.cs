@@ -61,7 +61,7 @@ public class Goomba : MonoBehaviour
     {
         menuManager.Pontuar(200);
         GetComponent<PadraoInimigo>().enabled = false;
-        GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         this.enabled = false;
         somChute.Play();
 

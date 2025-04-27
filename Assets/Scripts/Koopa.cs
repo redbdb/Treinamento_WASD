@@ -81,10 +81,10 @@ public class Koopa : MonoBehaviour
     {
         if(direcao == Vector2.down)
             return;
-            
+
         movendo = true;
 
-        GetComponent<Rigidbody2D>().isKinematic = false;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         PadraoInimigo movimento = GetComponent<PadraoInimigo>();
         movimento.direcao = direcao.normalized;
         movimento.velocidade = 12f;

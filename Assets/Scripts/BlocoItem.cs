@@ -14,7 +14,7 @@ public class BlocoItem : MonoBehaviour
         BoxCollider2D trigger = GetComponent<BoxCollider2D>();
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
-        rigidbody.isKinematic = true;
+        rigidbody.bodyType = RigidbodyType2D.Kinematic;
         trigger.enabled = false;
         hitbox.enabled = false;
         spriteRenderer.enabled = false;
@@ -38,7 +38,7 @@ public class BlocoItem : MonoBehaviour
             yield return null;
         }
 
-        rigidbody.isKinematic = false;
+        rigidbody.bodyType = RigidbodyType2D.Dynamic;
         hitbox.enabled = true;
         trigger.enabled = true;
     }
