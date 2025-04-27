@@ -21,7 +21,7 @@ public class Goomba : MonoBehaviour
 
     void Update()
     {
-        if(pos.y + 0.12f < GetComponent<Transform>().position.y){
+        if(pos.y + 0.11f < GetComponent<Transform>().position.y){
             StartCoroutine(Morte());
         }
         pos = GetComponent<Transform>().position;
