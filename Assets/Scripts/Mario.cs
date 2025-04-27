@@ -57,7 +57,7 @@ public class Mario : MonoBehaviour
         Vector2 bordaE = camera.ScreenToWorldPoint(Vector2.zero);
         Vector2 bordaD = camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
-        float aceleracao = 10f;
+        float aceleracao = 20f;
 
         float velocidadeAtual = Mathf.MoveTowards(corpo.linearVelocity.x, Input.GetAxis("Horizontal") * velocidade, aceleracao * Time.deltaTime);
 
