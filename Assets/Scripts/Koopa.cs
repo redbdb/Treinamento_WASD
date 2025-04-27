@@ -23,6 +23,7 @@ public class Koopa : MonoBehaviour
         {
             if(!collision.gameObject.GetComponent<Mario>().starp){
                 if(collision.transform.DotTest(transform, Vector2.down)){
+                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 20), ForceMode2D.Impulse);
                     menuManager.Pontuar(500);
                     somChute.Play();
                     Concha();
@@ -78,6 +79,9 @@ public class Koopa : MonoBehaviour
 
     private void Empurra(Vector2 direcao)
     {
+        if(direcao == Vector2.down)
+            return;
+            
         movendo = true;
 
         GetComponent<Rigidbody2D>().isKinematic = false;
