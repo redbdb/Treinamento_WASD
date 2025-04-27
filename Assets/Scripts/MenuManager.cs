@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
-        txtvidas.text = gameManager.GetComponent<GameManager>().vidas.ToString();
+        txtvidas.text = "x" + gameManager.GetComponent<GameManager>().vidas.ToString();
 
         if(Input.GetKeyDown(KeyCode.Escape) && !pause){
             Time.timeScale = 0;
@@ -40,8 +40,8 @@ public class MenuManager : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
 
         pauseUI.SetActive(false);
-        txtvidas.text = gameManager.GetComponent<GameManager>().vidas.ToString();
-        txtmoedas.text = "00";
+        txtvidas.text = "x" + gameManager.GetComponent<GameManager>().vidas.ToString();
+        txtmoedas.text = "x00";
         Pontuar(0);
 
         Musica.loop = true;
@@ -75,6 +75,6 @@ public class MenuManager : MonoBehaviour
 
     public void AddMoeda(){
         moedas++;
-        txtmoedas.text = moedas.ToString().PadLeft(2, '0');
+        txtmoedas.text = "x" + moedas.ToString().PadLeft(2, '0');
     }
 }
