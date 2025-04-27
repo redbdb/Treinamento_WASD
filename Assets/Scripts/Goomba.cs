@@ -81,8 +81,11 @@ public class Goomba : MonoBehaviour
 
         while (feito < duracao)
         {
+            if (gameObject.activeInHierarchy)
+        {
             transform.position += altura * Time.deltaTime;
             altura.y += gravidade * Time.deltaTime;
+        }
             feito += Time.deltaTime;
             yield return null;
         }
