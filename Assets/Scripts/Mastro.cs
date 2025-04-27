@@ -17,28 +17,28 @@ public class Mastro : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player")){
             menuManager.Pontuar(2500);
-            StartCoroutine(Mover(bandeira, fundo.position));
+            StartCoroutine(Mover(bandeira, fundo.position, 7f));
+            somDescida.Play();
             StartCoroutine(LevelClear(other.transform));
         }
     }
 
-    private IEnumerator LevelClear(Transform mario)//ajustar velocidade e 
+    private IEnumerator LevelClear(Transform mario)
     {
         mario.GetComponent<Mario>().enabled = false;
         mario.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
 
-        yield return Mover(mario, fundo.position);
-        yield return Mover(mario, mario.position + Vector3.right);
-        yield return Mover(mario, mario.position + Vector3.right + Vector3.down);
-        yield return Mover(mario, castelo.position);
+        yield return Mover(mario, fundo.position, 2f);
+        StartCoroutine(WaitEnd(somFim));
+        yield return Mover(mario, mario.position + Vector3.right, 2f);
+        yield return Mover(mario, mario.position + Vector3.right + Vector3.down, 2f);
+        yield return Mover(mario, castelo.position, 2f);
 
         mario.gameObject.SetActive(false);
-        Invoke(nameof(loadGameOver), 0.5f);//colocar delay ate acabar a musica?
     }
 
-    private IEnumerator Mover(Transform objeto, Vector3 pos)
+    private IEnumerator Mover(Transform objeto, Vector3 pos, float vel)//mais devagar? 4f base, devagar pro mario e mais ainda pra bandeira
     {
-        float vel = 4f;
 
         while(Vector3.Distance(objeto.position, pos) > 0.125f){
             objeto.position = Vector3.MoveTowards(objeto.position, pos, vel * Time.deltaTime);
@@ -48,7 +48,16 @@ public class Mastro : MonoBehaviour
         objeto.position = pos;
     }
 
-    private void loadGameOver(){
+    public IEnumerator WaitEnd(AudioSource musga){
+
+        menuManager.Musica.Pause();
+        musga.Play();
+
+        while (musga.isPlaying)
+        {
+            yield return null;
+        }
+
         SceneManager.LoadScene("GameOver");
     }
 }
