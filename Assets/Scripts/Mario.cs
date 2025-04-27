@@ -18,6 +18,7 @@ public class Mario : MonoBehaviour
     public bool sentido;
     public bool crescido;
     public bool starp = false;
+    public bool iframe;
 
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
@@ -91,13 +92,14 @@ public class Mario : MonoBehaviour
 
     public void TakeHit()
     {//colocar invencibilidade
-        if(!starp){
+        if(!starp && !iframe){
             if(crescido){
                 crescido = false;
                 colisorPequeno.enabled = true;
                 colisorGrande.enabled = false;
                 mariozinho.SetActive(true);
                 mariozao.SetActive(false);
+                StartCoroutine(Iframe());
             } else{
                 Dies();
             }
@@ -112,7 +114,10 @@ public class Mario : MonoBehaviour
         if(crescido)
             return;
         else{
-            sentido = true;
+            if(!sentido){
+                mariozinho.GetComponent<SpriteRenderer>().flipX = false;
+                sentido = true;
+            }
             colisorPequeno.enabled = false;
             colisorGrande.enabled = true;
             mariozao.SetActive(true);
@@ -200,5 +205,30 @@ public class Mario : MonoBehaviour
 
         musga.Pause();
         menu.Musica.Play();
+    }
+
+    public IEnumerator Iframe(){
+
+        iframe = true;
+
+        float feito = 0f;
+        float duracao = 2f;
+
+        while(feito < duracao){
+            float t = feito/duracao;
+            feito += Time.deltaTime;
+
+            if(Time.frameCount % 8 == 0){
+                mariozinho.GetComponent<SpriteRenderer>().enabled = !mariozinho.GetComponent<SpriteRenderer>().enabled;
+                mariozao.GetComponent<SpriteRenderer>().enabled = !mariozao.GetComponent<SpriteRenderer>().enabled;
+            }
+
+            yield return null;
+        }
+
+        mariozinho.GetComponent<SpriteRenderer>().enabled = true;
+        mariozao.GetComponent<SpriteRenderer>().enabled = true;
+
+        iframe = false;
     }
 }

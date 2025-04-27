@@ -1,14 +1,13 @@
 using UnityEngine;
 
 public class PadraoInimigo : MonoBehaviour
-{//corrigir colisao com outros inimigos
+{
     public float velocidade = 5f;
     public Vector2 direcao = Vector2.left;
 
     private new Rigidbody2D corpo;
     private Vector2 vetorVel;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         corpo = GetComponent<Rigidbody2D>();
@@ -25,8 +24,7 @@ public class PadraoInimigo : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()//colocar pra ignorar outros inimigos
+    void Update()
     { 
         vetorVel.x = direcao.x * velocidade;
         vetorVel.y += Physics.gravity.y * Time.fixedDeltaTime;
