@@ -54,7 +54,7 @@ public class Koopa : MonoBehaviour
         else if(encolhido && other.gameObject.CompareTag("Player")){
             if(!other.gameObject.GetComponent<Mario>().starp){
                 if(movendo){
-                    StartCoroutine(other.gameObject.GetComponent<Mario>().Morte());
+                    other.gameObject.GetComponent<Mario>().Dies();
                 }else{
                     menuManager.Pontuar(400);
                     Vector2 direcao = new Vector2(transform.position.x - other.transform.position.x, 0f);
