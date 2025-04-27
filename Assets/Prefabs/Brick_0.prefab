@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed28a5e3c557444ab3b25ecfac86176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
   blocoVazio: {fileID: 0}
   Maxhits: -1
   brick: 1

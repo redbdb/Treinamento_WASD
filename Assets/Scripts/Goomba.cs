@@ -19,7 +19,7 @@ public class Goomba : MonoBehaviour
 
     void Update()
     {
-        if(pos.y + 0.001f < GetComponent<Transform>().position.y)
+        if(pos.y + 0.05f < GetComponent<Transform>().position.y)
             Destroy(gameObject);//botar anim morte
         pos = GetComponent<Transform>().position;
     }
