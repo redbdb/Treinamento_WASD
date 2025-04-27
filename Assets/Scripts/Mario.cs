@@ -17,7 +17,7 @@ public class Mario : MonoBehaviour
     public bool correndo;
     public bool sentido;
     public bool crescido;
-    public bool starp = false;//{ get; private set; }
+    public bool starp = false;
 
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
@@ -62,7 +62,7 @@ public class Mario : MonoBehaviour
 
     public void Pular()
     {
-        if(Input.GetButtonDown("Jump") && isGrounded){//verificar se esta grande ou nao pra tocar o som
+        if(Input.GetButtonDown("Jump") && isGrounded){
             if(crescido)
                 somPuloGrande.Play();
             else
@@ -75,11 +75,11 @@ public class Mario : MonoBehaviour
 {
     if (corpo.linearVelocity.y > 0 && !Input.GetButton("Jump"))
     {
-        corpo.gravityScale = 3.5f;
+        corpo.gravityScale = 4f;
     }
     else if (corpo.linearVelocity.y < 0)
     {
-        corpo.gravityScale = 3f;
+        corpo.gravityScale = 3.5f;
     }
     else
     {
@@ -103,6 +103,9 @@ public class Mario : MonoBehaviour
     }
 
     public void Grow(){
+
+        menu.Pontuar(1000);
+
         if(crescido)
             return;
         else{
@@ -116,10 +119,16 @@ public class Mario : MonoBehaviour
     }
 
     public void CogumeloUP(){
+
+        menu.Pontuar(1000);
+
         gameManager.UP();
     }
 
     public void Starpower(){
+
+        menu.Pontuar(1000);
+        
         StartCoroutine(StarpowerAnimation());
     }
 
@@ -149,9 +158,21 @@ public class Mario : MonoBehaviour
     }
 
     public void Dies(){
+
         menu.Musica.Pause();
-        somMorte.Play();
+
+        StartCoroutine(WaitMusic(somMorte));
+    }
+
+    public IEnumerator WaitMusic(AudioSource musga){
+
+        musga.Play();
+
+        while (musga.isPlaying)
+        {
+            yield return null;
+        }
+
         gameManager.ResetLevel();
-        //colocar aqui reação da morte
     }
 }

@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class Moeda : MonoBehaviour
 {
+    public AudioSource som;
+
     void Start()
     {
+        som.Play();
         GameObject.Find("MenuManager").GetComponent<MenuManager>().AddMoeda();
 
         StartCoroutine(Animate());
@@ -34,17 +37,10 @@ public class Moeda : MonoBehaviour
             yield return null;
         }
 
-        feito = 0f;
+        spriteRenderer.enabled = false;
 
-        de = transform.position;
-        para = transform.position + Vector3.down * 1.5f;
-
-        while(feito < duracao){
-            float t = feito/duracao;
-
-            transform.position = Vector3.Lerp(de, para, t);
-            feito += Time.deltaTime;
-
+        while (som.isPlaying)
+        {
             yield return null;
         }
 
