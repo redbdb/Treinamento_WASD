@@ -22,6 +22,8 @@ public class Mario : MonoBehaviour
     public AudioSource somPuloPequeno;
     public AudioSource somPuloGrande;
     public AudioSource somMorte;
+    public AudioSource somPowerUp;
+    public AudioSource somStarPower;
 
     public MenuManager menu;
     public GameManager gameManager;
@@ -105,6 +107,7 @@ public class Mario : MonoBehaviour
     public void Grow(){
 
         menu.Pontuar(1000);
+        somPowerUp.Play();
 
         if(crescido)
             return;
@@ -121,6 +124,7 @@ public class Mario : MonoBehaviour
     public void CogumeloUP(){
 
         menu.Pontuar(1000);
+        somPowerUp.Play();
 
         gameManager.UP();
     }
@@ -128,6 +132,8 @@ public class Mario : MonoBehaviour
     public void Starpower(){
 
         menu.Pontuar(1000);
+        somPowerUp.Play();
+        StartCoroutine(WaitStar(somStarPower));
         
         StartCoroutine(StarpowerAnimation());
     }
@@ -161,10 +167,10 @@ public class Mario : MonoBehaviour
 
         menu.Musica.Pause();
 
-        StartCoroutine(WaitMusic(somMorte));
+        StartCoroutine(WaitDestroy(somMorte));
     }
 
-    public IEnumerator WaitMusic(AudioSource musga){
+    public IEnumerator WaitDestroy(AudioSource musga){
 
         musga.Play();
 
@@ -174,5 +180,25 @@ public class Mario : MonoBehaviour
         }
 
         gameManager.ResetLevel();
+    }
+
+    public IEnumerator WaitStar(AudioSource musga){
+
+        menu.Musica.Pause();
+        musga.Play();
+
+        float feito = 0f;
+        float duracao = 10f;
+
+        while(feito < duracao){
+            float t = feito/duracao;
+
+            feito += Time.deltaTime;
+
+            yield return null;
+        }
+
+        musga.Pause();
+        menu.Musica.Play();
     }
 }

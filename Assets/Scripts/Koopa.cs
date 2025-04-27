@@ -3,12 +3,18 @@ using UnityEngine;
 public class Koopa : MonoBehaviour
 {
     public MenuManager menuManager;
+    private Rigidbody2D rb;
 
     public Sprite conchaSprite;
     private bool encolhido = false;
     private bool movendo = false;
 
     public AudioSource somChute;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,6 +25,7 @@ public class Koopa : MonoBehaviour
                     menuManager.Pontuar(500);
                     somChute.Play();
                     Concha();
+                    rb.constraints = RigidbodyConstraints2D.FreezePositionX;
                 }
                 else{
                     collision.gameObject.GetComponent<Mario>().TakeHit();
@@ -32,6 +39,9 @@ public class Koopa : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
         if(movendo && other.gameObject.CompareTag("Inimigo"))
             Destroy(other.gameObject);
         else if(encolhido && other.gameObject.CompareTag("Player")){

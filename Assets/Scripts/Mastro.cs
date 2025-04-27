@@ -6,6 +6,9 @@ public class Mastro : MonoBehaviour
 {
     public MenuManager menuManager;
 
+    public AudioSource somDescida;
+    public AudioSource somFim;
+
     public Transform bandeira;
     public Transform fundo;
     public Transform castelo;
