@@ -4,6 +4,7 @@ using System.Collections;
 
 public class Mario : MonoBehaviour
 {
+    public Sprite Morto;
     public float velocidade;
     public Rigidbody2D corpo;
 
@@ -172,7 +173,37 @@ public class Mario : MonoBehaviour
 
         menu.Musica.Pause();
 
+        mariozinho.GetComponent<MarioSpriteRenderer>().enabled = false;
+        mariozao.GetComponent<MarioSpriteRenderer>().enabled = false;
+        colisorGrande.enabled = false;
+        colisorPequeno.enabled = false;
+        corpo.linearVelocity = new Vector2 (0,0);//talvez travar inves
+        corpo.isKinematic = true;
+        this.enabled = false;
+
+        GetComponent<SpriteRenderer>().enabled = true;
+
+        StartCoroutine(Morte());
         StartCoroutine(WaitDestroy(somMorte));
+    }
+
+    private IEnumerator Morte()
+    {
+        float feito = 0f;
+        float duracao = 3f;
+
+        float alturaPulo = 20f;
+        float gravidade = -36f;
+
+        Vector3 altura = Vector3.up * alturaPulo;
+
+        while (feito < duracao)
+        {
+            transform.position += altura * Time.deltaTime;
+            altura.y += gravidade * Time.deltaTime;
+            feito += Time.deltaTime;
+            yield return null;
+        }
     }
 
     public IEnumerator WaitDestroy(AudioSource musga){
