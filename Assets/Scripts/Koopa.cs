@@ -45,7 +45,7 @@ public class Koopa : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         if(movendo && other.gameObject.CompareTag("Inimigo"))
-            Destroy(other.gameObject);
+            StartCoroutine(other.GetComponent<Goomba>().Morte());
         else if(encolhido && other.gameObject.CompareTag("Player")){
             if(!other.gameObject.GetComponent<Mario>().starp){
                 if(movendo){
@@ -85,6 +85,7 @@ public class Koopa : MonoBehaviour
 
     private IEnumerator Morte()
     {
+        menuManager.Pontuar(200);
         somChute.Play();
 
         this.enabled = false;

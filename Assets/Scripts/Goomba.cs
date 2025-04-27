@@ -22,7 +22,6 @@ public class Goomba : MonoBehaviour
     void Update()
     {
         if(pos.y + 0.05f < GetComponent<Transform>().position.y){
-            GetComponent<PadraoInimigo>().enabled = false;
             StartCoroutine(Morte());
         }
         pos = GetComponent<Transform>().position;
@@ -42,7 +41,6 @@ public class Goomba : MonoBehaviour
                     collision.gameObject.GetComponent<Mario>().TakeHit();
                 }
             }else{
-                GetComponent<PadraoInimigo>().enabled = false;
                 StartCoroutine(Morte());
             }
             
@@ -59,11 +57,14 @@ public class Goomba : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 
-    private IEnumerator Morte()
+    public IEnumerator Morte()
     {
+        menuManager.Pontuar(200);
+        GetComponent<PadraoInimigo>().enabled = false;
+        GetComponent<Rigidbody2D>().isKinematic = true;
+        this.enabled = false;
         somChute.Play();
 
-        this.enabled = false;
         GetComponent<Collider2D>().enabled = false;
         GetComponent<PadraoInimigo>().enabled = false;
         GetComponent<Animated>().enabled = false;
