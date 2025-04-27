@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   som: {fileID: -8138242785414770055}
+  texto: {fileID: 8478686982203006392, guid: 36b50eeb281f94149ab876cd3e1d1ac3, type: 3}
 --- !u!82 &-8138242785414770055
 AudioSource:
   m_ObjectHideFlags: 0

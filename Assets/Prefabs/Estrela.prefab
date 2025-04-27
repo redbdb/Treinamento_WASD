@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6037511281913641478}
   - component: {fileID: -8945917856416279292}
   - component: {fileID: 23574378661407736}
+  - component: {fileID: 6352900630101518505}
   m_Layer: 7
   m_Name: Estrela
   m_TagString: Item
@@ -226,8 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5750b7943a841144f8cf6d174daa12e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 5
-  direcao: {x: 1, y: 0}
   som: {fileID: 23574378661407736}
 --- !u!82 &23574378661407736
 AudioSource:
@@ -326,3 +325,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6352900630101518505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419851298440526624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a02eba51107fe44a45aee8ed5a99fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 5
+  direcao: {x: 1, y: 0}

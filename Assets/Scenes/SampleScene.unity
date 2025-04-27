@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 119480027}
   - component: {fileID: 119480029}
   - component: {fileID: 119480030}
+  - component: {fileID: 119480031}
   m_Layer: 6
   m_Name: Goomba (8)
   m_TagString: Inimigo
@@ -742,6 +743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 119480029}
+  somChute: {fileID: 119480031}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &119480029
 AudioSource:
@@ -855,6 +857,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &119480031
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119480021}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &204190998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1320,7 @@ GameObject:
   - component: {fileID: 246937781}
   - component: {fileID: 246937783}
   - component: {fileID: 246937784}
+  - component: {fileID: 246937785}
   m_Layer: 6
   m_Name: Goomba (14)
   m_TagString: Inimigo
@@ -1399,6 +1499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 246937783}
+  somChute: {fileID: 246937785}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &246937783
 AudioSource:
@@ -1512,6 +1613,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &246937785
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246937775}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &269202593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +3099,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2939,6 +3137,7 @@ GameObject:
   - component: {fileID: 533128680}
   - component: {fileID: 533128682}
   - component: {fileID: 533128683}
+  - component: {fileID: 533128684}
   m_Layer: 6
   m_Name: Goomba (1)
   m_TagString: Inimigo
@@ -3117,6 +3316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 533128682}
+  somChute: {fileID: 533128684}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &533128682
 AudioSource:
@@ -3230,6 +3430,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &533128684
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533128674}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &554547036
 GameObject:
   m_ObjectHideFlags: 0
@@ -4114,6 +4411,7 @@ GameObject:
   - component: {fileID: 688944074}
   - component: {fileID: 688944076}
   - component: {fileID: 688944077}
+  - component: {fileID: 688944078}
   m_Layer: 6
   m_Name: Goomba (6)
   m_TagString: Inimigo
@@ -4292,6 +4590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 688944076}
+  somChute: {fileID: 688944078}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &688944076
 AudioSource:
@@ -4405,6 +4704,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &688944078
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688944068}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &692619682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4681,6 +5077,7 @@ GameObject:
   - component: {fileID: 858025436}
   - component: {fileID: 858025438}
   - component: {fileID: 858025439}
+  - component: {fileID: 858025440}
   m_Layer: 6
   m_Name: Goomba (9)
   m_TagString: Inimigo
@@ -4859,6 +5256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 858025438}
+  somChute: {fileID: 858025440}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &858025438
 AudioSource:
@@ -4972,6 +5370,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &858025440
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858025430}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &861437962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,6 +6022,7 @@ GameObject:
   - component: {fileID: 961212915}
   - component: {fileID: 961212917}
   - component: {fileID: 961212918}
+  - component: {fileID: 961212919}
   m_Layer: 6
   m_Name: Goomba (5)
   m_TagString: Inimigo
@@ -5705,6 +6201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 961212917}
+  somChute: {fileID: 961212919}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &961212917
 AudioSource:
@@ -5818,6 +6315,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &961212919
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961212909}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &971688040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,6 +6500,7 @@ GameObject:
   - component: {fileID: 1022654018}
   - component: {fileID: 1022654020}
   - component: {fileID: 1022654021}
+  - component: {fileID: 1022654022}
   m_Layer: 6
   m_Name: Goomba
   m_TagString: Inimigo
@@ -6084,6 +6679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1022654020}
+  somChute: {fileID: 1022654022}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1022654020
 AudioSource:
@@ -6197,6 +6793,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1022654022
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022654012}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1028227879
 GameObject:
   m_ObjectHideFlags: 0
@@ -6213,6 +6906,7 @@ GameObject:
   - component: {fileID: 1028227885}
   - component: {fileID: 1028227887}
   - component: {fileID: 1028227888}
+  - component: {fileID: 1028227889}
   m_Layer: 6
   m_Name: Goomba (13)
   m_TagString: Inimigo
@@ -6391,6 +7085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1028227887}
+  somChute: {fileID: 1028227889}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1028227887
 AudioSource:
@@ -6504,6 +7199,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1028227889
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028227879}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1092184842
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,6 +7526,7 @@ GameObject:
   - component: {fileID: 1116053024}
   - component: {fileID: 1116053026}
   - component: {fileID: 1116053027}
+  - component: {fileID: 1116053028}
   m_Layer: 6
   m_Name: Goomba (10)
   m_TagString: Inimigo
@@ -6912,6 +7705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1116053026}
+  somChute: {fileID: 1116053028}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1116053026
 AudioSource:
@@ -7025,6 +7819,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1116053028
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116053018}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1135748296
 GameObject:
   m_ObjectHideFlags: 0
@@ -7239,6 +8130,7 @@ GameObject:
   - component: {fileID: 1188870573}
   - component: {fileID: 1188870575}
   - component: {fileID: 1188870576}
+  - component: {fileID: 1188870577}
   m_Layer: 6
   m_Name: Goomba (4)
   m_TagString: Inimigo
@@ -7417,6 +8309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1188870575}
+  somChute: {fileID: 1188870577}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1188870575
 AudioSource:
@@ -7530,6 +8423,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1188870577
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188870567}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1199821260
 GameObject:
   m_ObjectHideFlags: 0
@@ -7673,6 +8663,7 @@ GameObject:
   - component: {fileID: 1200308327}
   - component: {fileID: 1200308329}
   - component: {fileID: 1200308330}
+  - component: {fileID: 1200308331}
   m_Layer: 6
   m_Name: Goomba (7)
   m_TagString: Inimigo
@@ -7851,6 +8842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1200308329}
+  somChute: {fileID: 1200308331}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1200308329
 AudioSource:
@@ -7964,6 +8956,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1200308331
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200308321}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1228677523
 GameObject:
   m_ObjectHideFlags: 0
@@ -51527,6 +52616,7 @@ GameObject:
   - component: {fileID: 1362743170}
   - component: {fileID: 1362743172}
   - component: {fileID: 1362743173}
+  - component: {fileID: 1362743174}
   m_Layer: 6
   m_Name: Goomba (15)
   m_TagString: Inimigo
@@ -51705,6 +52795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1362743172}
+  somChute: {fileID: 1362743174}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1362743172
 AudioSource:
@@ -51818,6 +52909,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1362743174
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362743164}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1376642337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51939,6 +53127,7 @@ GameObject:
   - component: {fileID: 1531535707}
   - component: {fileID: 1531535709}
   - component: {fileID: 1531535710}
+  - component: {fileID: 1531535711}
   m_Layer: 6
   m_Name: Goomba (3)
   m_TagString: Inimigo
@@ -52117,6 +53306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1531535709}
+  somChute: {fileID: 1531535711}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1531535709
 AudioSource:
@@ -52230,6 +53420,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1531535711
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531535701}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1617680579
 GameObject:
   m_ObjectHideFlags: 0
@@ -58945,7 +60232,7 @@ Transform:
   m_GameObject: {fileID: 1795483449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66, y: -4.5, z: 0}
+  m_LocalPosition: {x: -11.5, y: -4.5, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59677,6 +60964,7 @@ GameObject:
   - component: {fileID: 1813713571}
   - component: {fileID: 1813713573}
   - component: {fileID: 1813713574}
+  - component: {fileID: 1813713575}
   m_Layer: 6
   m_Name: Goomba (12)
   m_TagString: Inimigo
@@ -59855,6 +61143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1813713573}
+  somChute: {fileID: 1813713575}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1813713573
 AudioSource:
@@ -59968,6 +61257,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1813713575
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813713565}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1835505406
 GameObject:
   m_ObjectHideFlags: 0
@@ -60168,6 +61554,7 @@ GameObject:
   - component: {fileID: 1911400369}
   - component: {fileID: 1911400371}
   - component: {fileID: 1911400372}
+  - component: {fileID: 1911400373}
   m_Layer: 6
   m_Name: Goomba (2)
   m_TagString: Inimigo
@@ -60346,6 +61733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1911400371}
+  somChute: {fileID: 1911400373}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1911400371
 AudioSource:
@@ -60459,6 +61847,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1911400373
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911400363}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1915435864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60664,6 +62149,7 @@ GameObject:
   - component: {fileID: 1942385235}
   - component: {fileID: 1942385237}
   - component: {fileID: 1942385238}
+  - component: {fileID: 1942385239}
   m_Layer: 6
   m_Name: Goomba (11)
   m_TagString: Inimigo
@@ -60842,6 +62328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
   somMorteGoomba: {fileID: 1942385237}
+  somChute: {fileID: 1942385239}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
 --- !u!82 &1942385237
 AudioSource:
@@ -60955,6 +62442,103 @@ MonoBehaviour:
   sprites:
   - {fileID: 8278757702537296001, guid: 47db42f8dc8f79043b0730c7dcfc8c78, type: 3}
   - {fileID: 1996474554486279749, guid: 475986c1d3c0292458f9b2d391deb442, type: 3}
+--- !u!82 &1942385239
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942385229}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_Resource: {fileID: 8300000, guid: f999a3203fd3f82439ebc9f528ec795c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1954508784
 GameObject:
   m_ObjectHideFlags: 0
