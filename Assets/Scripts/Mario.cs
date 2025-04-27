@@ -150,16 +150,16 @@ public class Mario : MonoBehaviour
             
             feito += Time.deltaTime;
 
-            if(Time.frameCount % 4 == 0){
-                mariozinho.GetComponent<SpriteRenderer>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
-                mariozao.GetComponent<SpriteRenderer>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
+            if(Time.frameCount % 8 == 0){
+                mariozinho.GetComponent<SpriteRenderer>().enabled = !mariozinho.GetComponent<SpriteRenderer>().enabled;
+                mariozao.GetComponent<SpriteRenderer>().enabled = !mariozao.GetComponent<SpriteRenderer>().enabled;
             }
 
             yield return null;
         }
 
-        mariozinho.GetComponent<SpriteRenderer>().color = Color.white;
-        mariozao.GetComponent<SpriteRenderer>().color = Color.white;
+        mariozinho.GetComponent<SpriteRenderer>().enabled = true;
+        mariozao.GetComponent<SpriteRenderer>().enabled = true;
         starp = false;
     }
 
