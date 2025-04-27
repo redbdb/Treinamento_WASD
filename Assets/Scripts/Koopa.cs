@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Koopa : MonoBehaviour
@@ -31,7 +32,8 @@ public class Koopa : MonoBehaviour
                     collision.gameObject.GetComponent<Mario>().TakeHit();
                 }   
             }else{
-                Destroy(gameObject);
+                GetComponent<PadraoInimigo>().enabled = false;
+                StartCoroutine(Morte());
             }            
         }
         
@@ -56,7 +58,8 @@ public class Koopa : MonoBehaviour
                     somChute.Play();
                 }
             }else{
-                Destroy(gameObject);
+                GetComponent<PadraoInimigo>().enabled = false;
+                StartCoroutine(Morte());
             }
         }
     }
@@ -78,5 +81,36 @@ public class Koopa : MonoBehaviour
         movimento.direcao = direcao.normalized;
         movimento.velocidade = 12f;
         movimento.enabled = true;
+    }
+
+    private IEnumerator Morte()
+    {
+        somChute.Play();
+
+        this.enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<PadraoInimigo>().enabled = false;
+        GetComponent<Animated>().enabled = false;
+        GetComponent<SpriteRenderer>().flipY = true;
+
+        float feito = 0f;
+        float duracao = 3f;
+
+        float alturaPulo = 5f;
+        float gravidade = -30f;
+
+        Vector3 altura = Vector3.up * alturaPulo;
+        altura.x = 2f;
+
+        while (feito < duracao)
+        {
+            transform.position += altura * Time.deltaTime;
+            altura.y += gravidade * Time.deltaTime;
+            feito += Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 }

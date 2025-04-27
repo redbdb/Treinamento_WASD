@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Goomba : MonoBehaviour
@@ -5,6 +6,7 @@ public class Goomba : MonoBehaviour
     public MenuManager menuManager;
 
     public AudioSource somMorteGoomba;
+    public AudioSource somChute;
 
     private SpriteRenderer spriteRenderer;
     public Sprite goombaAmassado;
@@ -19,8 +21,10 @@ public class Goomba : MonoBehaviour
 
     void Update()
     {
-        if(pos.y + 0.05f < GetComponent<Transform>().position.y)
-            Destroy(gameObject);//botar anim morte
+        if(pos.y + 0.05f < GetComponent<Transform>().position.y){
+            GetComponent<PadraoInimigo>().enabled = false;
+            StartCoroutine(Morte());
+        }
         pos = GetComponent<Transform>().position;
     }
 
@@ -38,7 +42,8 @@ public class Goomba : MonoBehaviour
                     collision.gameObject.GetComponent<Mario>().TakeHit();
                 }
             }else{
-                Destroy(gameObject);
+                GetComponent<PadraoInimigo>().enabled = false;
+                StartCoroutine(Morte());
             }
             
                
@@ -52,5 +57,35 @@ public class Goomba : MonoBehaviour
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         spriteRenderer.sprite = goombaAmassado;
         Destroy(gameObject, 0.5f);
+    }
+
+    private IEnumerator Morte()
+    {
+        somChute.Play();
+
+        this.enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<PadraoInimigo>().enabled = false;
+        GetComponent<Animated>().enabled = false;
+        spriteRenderer.flipY = true;
+
+        float feito = 0f;
+        float duracao = 3f;
+
+        float alturaPulo = 5f;
+        float gravidade = -30f;
+
+        Vector3 altura = Vector3.up * alturaPulo;
+        altura.x = 2f;
+
+        while (feito < duracao)
+        {
+            transform.position += altura * Time.deltaTime;
+            altura.y += gravidade * Time.deltaTime;
+            feito += Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 }
