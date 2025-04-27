@@ -43,7 +43,7 @@ public class PadraoInimigo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Inimigo"))
+        if(other.gameObject.CompareTag("Inimigo") || other.gameObject.CompareTag("Item"))
         {
             direcao = -direcao;
         }
