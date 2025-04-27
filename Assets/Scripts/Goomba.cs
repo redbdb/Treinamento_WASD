@@ -9,9 +9,19 @@ public class Goomba : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite goombaAmassado;
 
+    private Vector3 pos;
+
     private void Awake()
     {
+        pos = GetComponent<Transform>().position;
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void Update()
+    {
+        if(pos.y + 0.001f < GetComponent<Transform>().position.y)
+            Destroy(gameObject);//botar anim morte
+        pos = GetComponent<Transform>().position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
