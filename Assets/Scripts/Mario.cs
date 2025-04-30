@@ -96,7 +96,7 @@ public class Mario : MonoBehaviour
 }
 
     public void TakeHit()
-    {//colocar invencibilidade
+    {
         if(!starp && !iframe){
             if(crescido){
                 crescido = false;
@@ -104,6 +104,7 @@ public class Mario : MonoBehaviour
                 colisorGrande.enabled = false;
                 mariozinho.SetActive(true);
                 mariozao.SetActive(false);
+                sentido = true;
                 StartCoroutine(Iframe());
             } else{
                 Dies();
