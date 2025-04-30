@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 1
@@ -242,7 +242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   som: {fileID: -8138242785414770055}
-  texto: {fileID: 8478686982203006392, guid: 36b50eeb281f94149ab876cd3e1d1ac3, type: 3}
 --- !u!82 &-8138242785414770055
 AudioSource:
   m_ObjectHideFlags: 0
