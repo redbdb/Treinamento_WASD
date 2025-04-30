@@ -57,6 +57,10 @@ public class Goomba : MonoBehaviour
         Destroy(gameObject, 0.5f);
     }
 
+    public void callMorte(){
+        StartCoroutine(Morte());
+    }
+
     public IEnumerator Morte()
     {
         menuManager.Pontuar(200);

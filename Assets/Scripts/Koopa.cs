@@ -46,11 +46,8 @@ public class Koopa : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         if(movendo && other.gameObject.CompareTag("Inimigo")){
-            StartCoroutine(other.GetComponent<Goomba>().Morte());
-            other.GetComponent<Goomba>().enabled = false;
-            other.GetComponent<PadraoInimigo>().enabled = false;
+            other.GetComponent<Goomba>().callMorte();
         }
-            
         else if(encolhido && other.gameObject.CompareTag("Player")){
             if(!other.gameObject.GetComponent<Mario>().starp){
                 if(movendo){
