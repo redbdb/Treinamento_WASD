@@ -190,6 +190,7 @@ public class Mario : MonoBehaviour
 
     public void Dies(){
 
+        menu.endgame = true;
         menu.Musica.Pause();
 
         mariozinho.GetComponent<MarioSpriteRenderer>().enabled = false;
