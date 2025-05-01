@@ -19,11 +19,6 @@ public class PadraoInimigo : MonoBehaviour
         enabled = true;
     }
 
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
     void Update()
     { 
         vetorVel.x = direcao.x * velocidade;

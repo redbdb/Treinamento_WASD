@@ -23,11 +23,6 @@ public class Estrela : MonoBehaviour
         enabled = true;
     }
 
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
     void Update()
     {
         isGrounded = corpo.Raycast(Vector2.down);

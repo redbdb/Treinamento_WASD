@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class Koopa : MonoBehaviour
 {
     public MenuManager menuManager;
     private Rigidbody2D rb;
 
+    public GameObject score;
     public Sprite conchaSprite;
     private bool encolhido = false;
     private bool movendo = false;
@@ -24,6 +26,7 @@ public class Koopa : MonoBehaviour
             if(!collision.gameObject.GetComponent<Mario>().starp){
                 if(collision.transform.DotTest(transform, Vector2.down)){
                     collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 20), ForceMode2D.Impulse);
+                    StartCoroutine(RisingScore(500));
                     menuManager.Pontuar(500);
                     somChute.Play();
                     Concha();
@@ -53,6 +56,7 @@ public class Koopa : MonoBehaviour
                 if(movendo){
                     other.gameObject.GetComponent<Mario>().Dies();
                 }else{
+                    StartCoroutine(RisingScore(400));
                     menuManager.Pontuar(400);
                     Vector2 direcao = new Vector2(transform.position.x - other.transform.position.x, 0f);
                     Empurra(direcao);
@@ -89,6 +93,7 @@ public class Koopa : MonoBehaviour
 
     private IEnumerator Morte()
     {
+        StartCoroutine(RisingScore(200));
         menuManager.Pontuar(200);
         somChute.Play();
 
@@ -117,5 +122,28 @@ public class Koopa : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    public IEnumerator RisingScore(int valor){
+
+        GameObject obj = Instantiate(score, transform.position, Quaternion.identity);
+        obj.GetComponent<TextMeshPro>().text = valor.ToString();
+
+        float feito = 0f;
+        float duracao = 0.5f;
+
+        while(feito < duracao){
+            Vector3 pos = obj.GetComponent<RectTransform>().position;
+            pos.y += 0.01f;
+            obj.GetComponent<RectTransform>().position = pos;
+
+            float t = feito/duracao;
+
+            feito += Time.deltaTime;
+
+            yield return null;
+        }
+
+        Destroy(obj);
     }
 }

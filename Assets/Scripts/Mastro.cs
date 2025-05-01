@@ -1,10 +1,12 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class Mastro : MonoBehaviour
 {
     public MenuManager menuManager;
+    public GameObject score;
 
     public AudioSource somDescida;
     public AudioSource somFim;
@@ -16,6 +18,7 @@ public class Mastro : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
+            StartCoroutine(RisingScore(2500));
             menuManager.Pontuar(2500);
             StartCoroutine(Mover(bandeira, fundo.position, 7f));
             somDescida.Play();
@@ -59,5 +62,28 @@ public class Mastro : MonoBehaviour
         }
 
         SceneManager.LoadScene("GameOver");
+    }
+
+    public IEnumerator RisingScore(int valor){
+
+        GameObject obj = Instantiate(score, transform.position, Quaternion.identity);
+        obj.GetComponent<TextMeshPro>().text = valor.ToString();
+
+        float feito = 0f;
+        float duracao = 1f;
+
+        while(feito < duracao){
+            Vector3 pos = obj.GetComponent<RectTransform>().position;
+            pos.y += 0.01f;
+            obj.GetComponent<RectTransform>().position = pos;
+
+            float t = feito/duracao;
+
+            feito += Time.deltaTime;
+
+            yield return null;
+        }
+
+        Destroy(obj);
     }
 }

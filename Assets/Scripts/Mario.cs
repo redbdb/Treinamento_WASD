@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
 
 public class Mario : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Mario : MonoBehaviour
 
     public MenuManager menu;
     public GameManager gameManager;
+    public GameObject score;
 
     private new Camera camera;
 
@@ -114,7 +116,9 @@ public class Mario : MonoBehaviour
 
     public void Grow(){
 
+        StartCoroutine(RisingScore(1000));
         menu.Pontuar(1000);
+
         somPowerUp.Play();
 
         if(crescido)
@@ -134,7 +138,9 @@ public class Mario : MonoBehaviour
 
     public void CogumeloUP(){
 
+        StartCoroutine(RisingScore(1000));
         menu.Pontuar(1000);
+
         somPowerUp.Play();
 
         gameManager.UP();
@@ -142,7 +148,9 @@ public class Mario : MonoBehaviour
 
     public void Starpower(){
 
+        StartCoroutine(RisingScore(1000));
         menu.Pontuar(1000);
+
         somPowerUp.Play();
         StartCoroutine(WaitStar(somStarPower));
         
@@ -182,7 +190,7 @@ public class Mario : MonoBehaviour
         mariozao.GetComponent<MarioSpriteRenderer>().enabled = false;
         colisorGrande.enabled = false;
         colisorPequeno.enabled = false;
-        corpo.linearVelocity = new Vector2 (0,0);//talvez travar inves
+        corpo.linearVelocity = new Vector2 (0,0);
         corpo.bodyType = RigidbodyType2D.Kinematic;
         this.enabled = false;
 
@@ -266,5 +274,28 @@ public class Mario : MonoBehaviour
         mariozao.GetComponent<SpriteRenderer>().enabled = true;
 
         iframe = false;
+    }
+
+    public IEnumerator RisingScore(int valor){
+
+        GameObject obj = Instantiate(score, transform.position, Quaternion.identity);
+        obj.GetComponent<TextMeshPro>().text = valor.ToString();
+
+        float feito = 0f;
+        float duracao = 0.5f;
+
+        while(feito < duracao){
+            Vector3 pos = obj.GetComponent<RectTransform>().position;
+            pos.y += 0.01f;
+            obj.GetComponent<RectTransform>().position = pos;
+
+            float t = feito/duracao;
+
+            feito += Time.deltaTime;
+
+            yield return null;
+        }
+
+        Destroy(obj);
     }
 }
