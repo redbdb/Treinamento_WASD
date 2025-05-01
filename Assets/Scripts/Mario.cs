@@ -56,6 +56,9 @@ public class Mario : MonoBehaviour
 
     void Mover()
     {
+        if(menu.endgame)
+            return;
+
         Vector2 bordaE = camera.ScreenToWorldPoint(Vector2.zero);
         Vector2 bordaD = camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
@@ -72,6 +75,9 @@ public class Mario : MonoBehaviour
 
     public void Pular()
     {
+        if(menu.endgame)
+            return;
+            
         if(Input.GetButtonDown("Jump") && isGrounded){
             if(crescido)
                 somPuloGrande.Play();

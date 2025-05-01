@@ -742,6 +742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 119480029}
   somChute: {fileID: 119480031}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -1498,6 +1499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 246937783}
   somChute: {fileID: 246937785}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -3315,6 +3317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 533128682}
   somChute: {fileID: 533128684}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -4589,6 +4592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 688944076}
   somChute: {fileID: 688944078}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -5255,6 +5259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 858025438}
   somChute: {fileID: 858025440}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -5550,8 +5555,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 663269437}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 483895859}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -6200,6 +6205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 961212917}
   somChute: {fileID: 961212919}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -6678,6 +6684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1022654020}
   somChute: {fileID: 1022654022}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -7084,6 +7091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1028227887}
   somChute: {fileID: 1028227889}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -7704,6 +7712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1116053026}
   somChute: {fileID: 1116053028}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -8308,6 +8317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1188870575}
   somChute: {fileID: 1188870577}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -8841,6 +8851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1200308329}
   somChute: {fileID: 1200308331}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -52401,6 +52412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somDescida: {fileID: 1320879931}
   somFim: {fileID: 1320879930}
   bandeira: {fileID: 2117806136}
@@ -52794,6 +52806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1362743172}
   somChute: {fileID: 1362743174}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -53305,6 +53318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1531535709}
   somChute: {fileID: 1531535711}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -60273,6 +60287,7 @@ MonoBehaviour:
   somStarPower: {fileID: 1795483460}
   menu: {fileID: 483895859}
   gameManager: {fileID: 663269437}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
 --- !u!50 &1795483454
 Rigidbody2D:
   serializedVersion: 5
@@ -61142,6 +61157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1813713573}
   somChute: {fileID: 1813713575}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -61732,6 +61748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1911400371}
   somChute: {fileID: 1911400373}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -62327,6 +62344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   somMorteGoomba: {fileID: 1942385237}
   somChute: {fileID: 1942385239}
   goombaAmassado: {fileID: 21300000, guid: 1eafde214b73e6b40b5a15c97ca2c83e, type: 3}
@@ -63191,6 +63209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 483895859}
+  score: {fileID: 6230883433851564706, guid: 82a9d88c96cb21748b9b735eddfd467a, type: 3}
   conchaSprite: {fileID: -383072003024143027, guid: 23367917e07805747a20a2a2e27b56f5, type: 3}
   somChute: {fileID: 2124366455}
 --- !u!61 &2124366453

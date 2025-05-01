@@ -9,6 +9,7 @@ public class MarioSpriteRenderer : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private Mario movimento;
+    public MenuManager menu;
 
     private void Awake()
     {
@@ -28,9 +29,17 @@ public class MarioSpriteRenderer : MonoBehaviour
 
         private void LateUpdate()
     {
-        if((Input.GetAxis("Horizontal") < 0 && movimento.sentido) || (Input.GetAxis("Horizontal") > 0 && !movimento.sentido)){
+        if(menu.endgame)
+            spriteRenderer.flipX = false;
+        
+        if(((Input.GetAxis("Horizontal") < 0 && movimento.sentido) || (Input.GetAxis("Horizontal") > 0 && !movimento.sentido)) && !menu.endgame){
             movimento.sentido = !movimento.sentido;
             spriteRenderer.flipX = !spriteRenderer.flipX;
+        }
+        
+        if(movimento.isGrounded && menu.endgame){
+            correndo.enabled = true;
+            return;
         }
 
         correndo.enabled = movimento.correndo;

@@ -20,22 +20,24 @@ public class MenuManager : MonoBehaviour
     public int vidas;
     public int moedas = 0;
 
+    public bool endgame;
+
     void Update()
     {
         txtvidas.text = "x" + gameManager.GetComponent<GameManager>().vidas.ToString();
 
-        if(Input.GetKeyDown(KeyCode.Escape) && !pause){
+        if(Input.GetKeyDown(KeyCode.Escape) && !pause && !endgame){
             Time.timeScale = 0;
             Musica.Pause();
             somPause.Play();
             pauseUI.SetActive(true);
             pause = true;
-        }else if(Input.GetKeyDown(KeyCode.Escape) && pause){
+        }else if(Input.GetKeyDown(KeyCode.Escape) && pause && !endgame){
             Resume();
         }
     }
 
-    void Start(){//iniciar coloca musica em loop e amostra o cursor, estaria invisivel se tivesse reiniciado o jogo no menu de pause
+    void Start(){
         gameManager = GameObject.Find("GameManager");
 
         pauseUI.SetActive(false);

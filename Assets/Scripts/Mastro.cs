@@ -18,6 +18,7 @@ public class Mastro : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player")){
+            menuManager.endgame = true;
             StartCoroutine(RisingScore(2500));
             menuManager.Pontuar(2500);
             StartCoroutine(Mover(bandeira, fundo.position, 7f));
@@ -28,7 +29,6 @@ public class Mastro : MonoBehaviour
 
     private IEnumerator LevelClear(Transform mario)
     {
-        mario.GetComponent<Mario>().enabled = false;
         mario.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
 
         yield return Mover(mario, fundo.position, 2f);
