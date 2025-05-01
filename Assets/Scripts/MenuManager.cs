@@ -32,7 +32,6 @@ public class MenuManager : MonoBehaviour
             pause = true;
         }else if(Input.GetKeyDown(KeyCode.Escape) && pause){
             Resume();
-            Musica.Play();
         }
     }
 
@@ -59,6 +58,7 @@ public class MenuManager : MonoBehaviour
 
     public void Resume()
     {
+        Musica.Play();
         Time.timeScale = 1;
         pause = false;
         pauseUI.SetActive(false);

@@ -4,6 +4,7 @@ using UnityEngine;
 public class Blocos : MonoBehaviour
 {   
     public GameObject item;
+    public AudioSource somQuebra;
 
     public Sprite blocoVazio; 
     public int Maxhits = -1;
@@ -17,8 +18,9 @@ public class Blocos : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Player") && collision.transform.DotTest(transform, Vector2.up))
         {
-            if(brick && collision.gameObject.GetComponent<Mario>().crescido)
-                Destroy(gameObject);
+            if(brick && collision.gameObject.GetComponent<Mario>().crescido){
+                StartCoroutine(breakBrick());
+            }
             else
                 Hit();
         }
@@ -61,5 +63,20 @@ public class Blocos : MonoBehaviour
         if(Maxhits == 0){
             spriteRenderer.sprite = blocoVazio;
         }
+    }
+
+    private IEnumerator breakBrick(){
+
+        somQuebra.Play();
+
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        while (somQuebra.isPlaying)
+        {
+            yield return null;
+        }
+
+        Destroy(gameObject);
     }
 }
