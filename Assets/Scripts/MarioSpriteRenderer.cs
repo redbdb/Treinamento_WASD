@@ -36,7 +36,10 @@ public class MarioSpriteRenderer : MonoBehaviour
             movimento.sentido = !movimento.sentido;
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
-        
+
+        if((Input.GetAxis("Horizontal") < 0 && movimento.GetComponent<Rigidbody2D>().linearVelocity.x > 0f) || (Input.GetAxis("Horizontal") > 0 && movimento.GetComponent<Rigidbody2D>().linearVelocity.x < 0f))
+            spriteRenderer.sprite = drift;
+
         if(movimento.isGrounded && menu.endgame){
             correndo.enabled = true;
             return;
