@@ -6,10 +6,12 @@ public class PadraoInimigo : MonoBehaviour
     public Vector2 direcao = Vector2.left;
 
     private Rigidbody2D corpo;
+    private SpriteRenderer sprite;
     private Vector2 vetorVel;
 
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         corpo = GetComponent<Rigidbody2D>();
         enabled = false;
     }
@@ -19,14 +21,20 @@ public class PadraoInimigo : MonoBehaviour
         enabled = true;
     }
 
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);    
+    }
+
     void Update()
-    { 
+    {
         vetorVel.x = direcao.x * velocidade;
         vetorVel.y += Physics.gravity.y * Time.fixedDeltaTime;
 
         corpo.MovePosition(corpo.position  + vetorVel * Time.fixedDeltaTime);
 
         if(corpo.Raycast(direcao)){
+            sprite.flipX = !sprite.flipX;
             direcao = -direcao;
         }
 

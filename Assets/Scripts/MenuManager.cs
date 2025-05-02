@@ -54,6 +54,8 @@ public class MenuManager : MonoBehaviour
     public void LoadScenes(string cena){//carrega uma cena passada como argumento
         SceneManager.LoadScene(cena);
         Time.timeScale = 1;
+        gameManager = GameObject.Find("GameManager");
+        gameManager.GetComponent<GameManager>().RestartUP();
     }
 
     public void Sair(){//fecha o jogo

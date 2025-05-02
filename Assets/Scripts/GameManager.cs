@@ -32,11 +32,16 @@ public class GameManager : MonoBehaviour
         if(vidas > 0){
             SceneManager.LoadScene("SampleScene");
         }else{
+            Cursor.visible = true;
             SceneManager.LoadScene("GameOver");
         }
     }
 
     public void UP(){
         vidas++;
+    }
+
+    public void RestartUP(){
+        vidas = 3;
     }
 }

@@ -53,8 +53,11 @@ public class Koopa : MonoBehaviour
         }
         else if(encolhido && other.gameObject.CompareTag("Player")){
             if(!other.gameObject.GetComponent<Mario>().starp){
-                if(movendo){
-                    other.gameObject.GetComponent<Mario>().Dies();
+                if(movendo && !other.transform.DotTest(transform, Vector2.down)){
+                    other.gameObject.GetComponent<Mario>().TakeHit();
+                }else if(movendo && other.transform.DotTest(transform, Vector2.down)){
+                    movendo = false;
+                    GetComponent<PadraoInimigo>().enabled = false;
                 }else{
                     StartCoroutine(RisingScore(400));
                     menuManager.Pontuar(400);
