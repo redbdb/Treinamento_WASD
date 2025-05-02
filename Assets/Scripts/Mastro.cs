@@ -61,6 +61,7 @@ public class Mastro : MonoBehaviour
             yield return null;
         }
 
+        Cursor.visible = true;
         SceneManager.LoadScene("GameOver");
     }
 
