@@ -107,6 +107,7 @@ public class Mario : MonoBehaviour
     {
         if(!starp && !iframe){
             if(crescido){
+                StartCoroutine(CoguAnim());
                 crescido = false;
                 colisorPequeno.enabled = true;
                 colisorGrande.enabled = false;
@@ -134,6 +135,7 @@ public class Mario : MonoBehaviour
                 mariozinho.GetComponent<SpriteRenderer>().flipX = false;
                 sentido = true;
             }
+            StartCoroutine(CoguAnim());
             colisorPequeno.enabled = false;
             colisorGrande.enabled = true;
             mariozao.SetActive(true);
@@ -304,5 +306,30 @@ public class Mario : MonoBehaviour
         }
 
         Destroy(obj);
+    }
+
+    public IEnumerator CoguAnim(){
+
+        Time.timeScale = 0.01f;
+
+        float feito = 0f;
+        float duracao = 2f;
+
+        while(feito < duracao){
+            float t = feito/duracao;
+            feito += 70f * Time.deltaTime;
+
+            if(Time.frameCount % 40 == 0){
+                mariozinho.GetComponent<SpriteRenderer>().enabled = !mariozinho.GetComponent<SpriteRenderer>().enabled;
+                mariozao.GetComponent<SpriteRenderer>().enabled = !mariozao.GetComponent<SpriteRenderer>().enabled;
+            }
+
+            yield return null;
+        }
+
+        mariozinho.GetComponent<SpriteRenderer>().enabled = true;
+        mariozao.GetComponent<SpriteRenderer>().enabled = true;
+
+        Time.timeScale = 1f;
     }
 }
