@@ -310,6 +310,9 @@ public class Mario : MonoBehaviour
 
     public IEnumerator CoguAnim(){
 
+        mariozinho.GetComponent<MarioSpriteRenderer>().enabled = false;
+        mariozao.GetComponent<MarioSpriteRenderer>().enabled = false;
+
         Time.timeScale = 0.01f;
 
         float feito = 0f;
@@ -329,6 +332,8 @@ public class Mario : MonoBehaviour
 
         mariozinho.GetComponent<SpriteRenderer>().enabled = true;
         mariozao.GetComponent<SpriteRenderer>().enabled = true;
+        mariozinho.GetComponent<MarioSpriteRenderer>().enabled = true;
+        mariozao.GetComponent<MarioSpriteRenderer>().enabled = true;
 
         Time.timeScale = 1f;
     }
