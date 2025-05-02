@@ -67,6 +67,21 @@ public class Blocos : MonoBehaviour
 
     private IEnumerator breakBrick(){
 
+        Transform transform = GetComponent<Transform>();
+        Vector3 posI = transform.position;
+
+        float feito = 0f;
+        float duracao = 0.05f;
+
+        while(feito < duracao){
+            float t = feito/duracao;
+
+            transform.position = Vector3.Lerp(posI, posI + Vector3.up * 0.5f, t);
+            feito += Time.deltaTime;
+
+            yield return null;
+        }
+
         somQuebra.Play();
 
         GetComponent<SpriteRenderer>().enabled = false;
