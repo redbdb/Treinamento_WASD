@@ -27,6 +27,7 @@ public class MenuManager : MonoBehaviour
         txtvidas.text = "x" + gameManager.GetComponent<GameManager>().vidas.ToString();
 
         if(Input.GetKeyDown(KeyCode.Escape) && !pause && !endgame){
+            Cursor.visible = true;
             Time.timeScale = 0;
             Musica.Pause();
             somPause.Play();
@@ -41,6 +42,7 @@ public class MenuManager : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
 
         pauseUI.SetActive(false);
+        Cursor.visible = false;
         txtvidas.text = "x" + gameManager.GetComponent<GameManager>().vidas.ToString();
         txtmoedas.text = "x00";
         Pontuar(0);
@@ -60,6 +62,7 @@ public class MenuManager : MonoBehaviour
 
     public void Resume()
     {
+        Cursor.visible = false;
         Musica.Play();
         Time.timeScale = 1;
         pause = false;

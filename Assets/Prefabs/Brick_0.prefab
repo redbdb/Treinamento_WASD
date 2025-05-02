@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
+  particle: {fileID: 5734303536058073005, guid: eaba1351f8d5de84ea0b9f4515055562, type: 3}
   somQuebra: {fileID: -8521869431183307191}
   blocoVazio: {fileID: 0}
   Maxhits: -1

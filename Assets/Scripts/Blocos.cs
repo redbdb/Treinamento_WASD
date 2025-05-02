@@ -4,6 +4,7 @@ using UnityEngine;
 public class Blocos : MonoBehaviour
 {   
     public GameObject item;
+    public GameObject particle;
     public AudioSource somQuebra;
 
     public Sprite blocoVazio; 
@@ -19,6 +20,10 @@ public class Blocos : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") && collision.transform.DotTest(transform, Vector2.up))
         {
             if(brick && collision.gameObject.GetComponent<Mario>().crescido){
+                StartCoroutine(Quebra(5f, 7f));
+                StartCoroutine(Quebra(-5f, 7f));
+                StartCoroutine(Quebra(5f, 0f));
+                StartCoroutine(Quebra(-5f, 0f));
                 StartCoroutine(breakBrick());
             }
             else
@@ -67,6 +72,7 @@ public class Blocos : MonoBehaviour
 
     private IEnumerator breakBrick(){
 
+        GetComponent<SpriteRenderer>().enabled = false;
         Transform transform = GetComponent<Transform>();
         Vector3 posI = transform.position;
 
@@ -93,5 +99,30 @@ public class Blocos : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private IEnumerator Quebra(float eixoX, float eixoY){
+
+        GameObject particula = Instantiate(particle, transform.position, Quaternion.identity);
+
+        float feito = 0f;
+        float duracao = 0.5f;
+
+        float alturaPulo = eixoY;
+        float gravidade = -36f;
+
+        Vector3 altura = Vector3.up * alturaPulo;
+        altura.x = eixoX;
+
+        while (feito < duracao)
+        {
+            particula.transform.position += altura * Time.deltaTime;
+            altura.y += gravidade * Time.deltaTime;
+            feito += Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(particula);
+
     }
 }
