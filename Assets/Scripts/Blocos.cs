@@ -17,7 +17,8 @@ public class Blocos : MonoBehaviour
             return;
         } 
 
-        if(collision.gameObject.CompareTag("Player") && collision.transform.DotTest(transform, Vector2.up))
+        if(collision.gameObject.CompareTag("Player") && collision.transform.DotTest(transform, Vector2.up) && 
+        collision.gameObject.GetComponent<Transform>().position.x >= GetComponent<Transform>().position.x - 0.95f && collision.gameObject.GetComponent<Transform>().position.x <= GetComponent<Transform>().position.x + 0.95f)
         {
             if(brick && collision.gameObject.GetComponent<Mario>().crescido){
                 StartCoroutine(Quebra(5f, 7f));

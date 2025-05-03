@@ -28,13 +28,18 @@ public class PadraoInimigo : MonoBehaviour
 
     void Update()
     {
+        if(direcao.x > 0){
+            sprite.flipX = true;
+        }else{
+            sprite.flipX = false;
+        }
+
         vetorVel.x = direcao.x * velocidade;
         vetorVel.y += Physics.gravity.y * Time.fixedDeltaTime;
 
         corpo.MovePosition(corpo.position  + vetorVel * Time.fixedDeltaTime);
 
         if(corpo.Raycast(direcao)){
-            sprite.flipX = !sprite.flipX;
             direcao = -direcao;
         }
 

@@ -15,12 +15,13 @@ public class Mastro : MonoBehaviour
     public Transform fundo;
     public Transform castelo;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)//100 ate 5000, -5 ate 5
     {
         if(other.gameObject.CompareTag("Player")){
+            float pontos = 100f + 490f * (other.gameObject.GetComponent<Transform>().position.y + 5f);
             menuManager.endgame = true;
-            StartCoroutine(RisingScore(2500));
-            menuManager.Pontuar(2500);
+            StartCoroutine(RisingScore((int)pontos));
+            menuManager.Pontuar((int)pontos);
             StartCoroutine(Mover(bandeira, fundo.position, 7f));
             somDescida.Play();
             StartCoroutine(LevelClear(other.transform));
