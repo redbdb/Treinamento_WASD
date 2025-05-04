@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PadraoInimigo : MonoBehaviour
@@ -51,7 +52,24 @@ public class PadraoInimigo : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Inimigo") || other.gameObject.CompareTag("Item"))
         {
-            direcao = -direcao;
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
+        }else if(other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Mario>().iframe){
+            StartCoroutine(WaitIframe(other.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>()));
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
         }
+    }
+
+    public IEnumerator WaitIframe(Collider2D col1, Collider2D col2){
+
+        float feito = 0f;
+        float duracao = 2f;
+
+        while(feito < duracao){
+            feito += Time.deltaTime;
+
+            yield return null;
+        }
+
+        Physics2D.IgnoreCollision(col1, col2, false);
     }
 }
